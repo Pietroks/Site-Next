@@ -5,8 +5,6 @@ import { IconArrow, IconComputer, IconGraduationCap, IconHeart, IconPerson, Icon
 import PrimaryButton from "./PrimaryButton";
 import { Animated } from "./Animated";
 
-const iconsStyle = "text-[#3E10B4] w-18 h-18 bg-[#E4E3FB] p-2 rounded-2xl shadow-2xl";
-
 const benefits = [
   { icon: IconGraduationCap, title: "Ensino de qualidade" },
   { icon: IconHeart, title: "Reconhecido pelo MEC" },
@@ -49,7 +47,7 @@ export default function CtaComponent() {
               return (
                 <Animated key={benefit.title} as="div" preset="fadeRight" index={index} className="flex flex-col items-center gap-4">
                   <Animated as="div" whileHover="hoverScale">
-                    <Icon className={iconsStyle} />
+                    <Icon className="text-[#3E10B4] w-18 h-18 bg-[#E4E3FB] p-2 rounded-2xl shadow-2xl" />
                   </Animated>
 
                   <p className="text-sm font-semibold text-center text-black">{benefit.title}</p>
