@@ -75,7 +75,7 @@ export default function CtaComponent() {
               <IconShield className="text-[#3D11B4] p-3 rounded-full bg-[#E8E1FD] w-14 lg:w-20 h-14 lg:h-20" />
             </Animated>
 
-            <Animated as="p" preset="fadeUp" delay={0.5} className="w-full lg:w-3/5 text-sm lg:text-base text-black">
+            <Animated as="p" preset="fadeUp" delay={0.5} className="w-full lg:w-3/5 text-sm lg:text-base text-primary">
               Aqui você encontra o apoio que precisa para evoluir, aprender e conquistar seus objetivos.
             </Animated>
           </div>
