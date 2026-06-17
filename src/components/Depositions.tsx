@@ -146,7 +146,7 @@ export default function Depositions() {
       <HeartBanner
         textButton="Conheça nossos cursos"
         onClick={() => document.getElementById("cursos")?.scrollIntoView({ behavior: "smooth" })}
-        icon={<IconHeart />}
+        icon={<IconHeart className="text-white w-25 h-25" />}
         text={
           <>
             Mais de <strong className="text-purple-800 font-bold">120 mil alunos</strong> já transformaram seu futuro com a gente. Faça

@@ -18,7 +18,7 @@ export default function FAQContactItem({ icon, title, value, href }: FAQContACTI
           delay={0.3}
           hover="icon"
           transition={{ duration: 0.2 }}
-          className="p-1 md:p-3 rounded-2xl shadow-2xl bg-[#F2F2FC]"
+          className="p-1 md:p-3 rounded-2xl shadow-2xl bg-[#F2F2FC] text-[#3C13D3]"
         >
           {icon}
         </Animated>

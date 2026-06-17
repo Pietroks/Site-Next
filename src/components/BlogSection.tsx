@@ -111,7 +111,7 @@ export default function BlogSection() {
       </div>
 
       <HeartBanner
-        icon={<IconNewspapper />}
+        icon={<IconNewspapper className="text-white w-25 h-25" />}
         text={
           <>
             Mais de <strong className="text-purple-800 font-bold text-xl">500 conteúdos</strong> publicados para apoiar sua jornada

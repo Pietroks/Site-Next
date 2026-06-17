@@ -11,17 +11,17 @@ export function SubscriptionForm() {
     {
       icon: <IconGraduationCap />,
       text: "Cursos reconhecidos pelo MEC",
-      bgStyle: "bg-[#4741bf] rounded-2xl p-3 shadow-xl relative z-50",
+      bgStyle: "bg-[#4741bf] rounded-2xl p-3 shadow-xl relative z-50 text-white",
     },
     {
       icon: <IconClock />,
       text: "Estude com flexibilidade",
-      bgStyle: "bg-[#664bd8] rounded-2xl p-3 shadow-xl relative z-50",
+      bgStyle: "bg-[#664bd8] rounded-2xl p-3 shadow-xl relative z-50 text-white",
     },
     {
       icon: <IconHeadset />,
       text: "Suporte próximo e especializado",
-      bgStyle: "bg-[#6c60d7] rounded-2xl p-3 shadow-xl relative z-50",
+      bgStyle: "bg-[#6c60d7] rounded-2xl p-3 shadow-xl relative z-50 text-white",
     },
   ];
 
@@ -42,7 +42,7 @@ export function SubscriptionForm() {
             delay={0.2}
             className="w-fit py-1 px-3 my-10 flex items-center gap-2 bg-linear-to-r from-[#6E4CD6] to-[#463CBD] rounded-full shadow-xl"
           >
-            <IconPen />
+            <IconPen className="text-white" />
             <p className="uppercase text-gray-100">faça sua inscrição</p>
           </Animated>
 
@@ -74,7 +74,7 @@ export function SubscriptionForm() {
         <Animated as="div" preset="fadeRight" delay={0.2} className="col-span-1 lg:col-span-5 bg-gray-100 rounded-2xl shadow-lg p-6">
           <Animated as="div" preset="fadeUp" delay={0.3} className="flex items-start gap-5">
             <Animated as="div" hover="icon" className="rounded-full p-3 bg-[#753FEA] shadow-xl">
-              <IconPapper />
+              <IconPapper className="text-white" />
             </Animated>
 
             <div className="flex flex-col">

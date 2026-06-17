@@ -23,7 +23,7 @@ export default function CtaComponent() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-10 gap-8 w-full bg-[#F2F1FD] rounded-2xl shadow-2xl relative">
         <div className="col-span-1 lg:col-span-5 p-5 lg:p-16">
           <div className="relative overflow-hidden">
-            <Animated as="h2" preset="fadeUp" delay={0.2} className="text-5xl lg:text-6xl font-bold mb-5">
+            <Animated as="h2" preset="fadeUp" delay={0.2} className="text-5xl lg:text-6xl font-bold mb-5 text-black">
               Seu futuro começa <strong className="bg-unintese-grad bg-clip-text text-transparent">agora.</strong>
             </Animated>
 
@@ -52,7 +52,7 @@ export default function CtaComponent() {
                     <Icon className={iconsStyle} />
                   </Animated>
 
-                  <p className="text-sm font-semibold text-center">{benefit.title}</p>
+                  <p className="text-sm font-semibold text-center text-black">{benefit.title}</p>
                 </Animated>
               );
             })}

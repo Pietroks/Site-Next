@@ -33,9 +33,9 @@ export default function Hero() {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="px-8 md:px-3 py-2 rounded-xl shadow-lg font-semibold flex items-center justify-center gap-3 bg-white text-purple-900 transition-all duration-300 hover:bg-orange-500 hover:text-white cursor-pointer md:text-base text-lg"
+              className="px-8 md:px-3 py-2 group rounded-xl shadow-lg font-semibold flex items-center justify-center gap-3 bg-white text-purple-900 transition-all duration-300 hover:bg-orange-500 hover:text-white cursor-pointer md:text-base text-lg"
             >
-              <WhatsAppIcon className="w-8 h-8" />
+              <WhatsAppIcon className="w-8 h-8 text-purple-900 transition-all duration-500 group-hover:text-white" />
               Fale com um consultor
             </motion.button>
           </div>

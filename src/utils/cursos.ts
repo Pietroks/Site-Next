@@ -100,7 +100,7 @@ export const Cursos = [
     category: "tecgea",
     duracao: "2 anos",
     modalidade: "EAD",
-    thumb: "/cursos/analise-desenvolvimento-sistemas.jpg",
+    thumb: "/cursos/capacitacao@0.3x.png",
     alt: "Análise e Desenvolvimento de Sistemas",
   },
   {
@@ -108,7 +108,7 @@ export const Cursos = [
     category: "tecgea",
     duracao: "2 anos",
     modalidade: "EAD",
-    thumb: "/cursos/gestao-ti.jpg",
+    thumb: "/cursos/LIBRAS-FLUENCY.png",
     alt: "Gestão de T.I",
   },
   {
@@ -116,7 +116,7 @@ export const Cursos = [
     category: "tecgea",
     duracao: "2 anos",
     modalidade: "EAD",
-    thumb: "/cursos/marketing.jpg",
+    thumb: "/cursos/libras@0.3x.png",
     alt: "Marketing",
   },
   {
@@ -124,7 +124,7 @@ export const Cursos = [
     category: "tecgea",
     duracao: "2 anos",
     modalidade: "EAD",
-    thumb: "/cursos/processos-gerenciais.jpg",
+    thumb: "/cursos/thumb-pos-autismo.jpg",
     alt: "Processos Gerenciais",
   },
   {
@@ -132,7 +132,7 @@ export const Cursos = [
     category: "tecgea",
     duracao: "2 anos",
     modalidade: "EAD",
-    thumb: "/cursos/gestao-financeira.jpg",
+    thumb: "/cursos/thumb-pos-libras-expert-EDUCACIONAL.jpg",
     alt: "Gestão Financeira",
   },
   {
@@ -140,7 +140,7 @@ export const Cursos = [
     category: "tecgea",
     duracao: "2 anos",
     modalidade: "EAD",
-    thumb: "/cursos/gestao-comercial.jpg",
+    thumb: "/cursos/thumb-pos-libras-expert-JURIDICO.jpg",
     alt: "Gestão Comercial",
   },
 ];
