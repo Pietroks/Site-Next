@@ -5,8 +5,6 @@ import { IconArrow, IconComputer, IconGraduationCap, IconHeart, IconPerson, Icon
 import PrimaryButton from "../PrimaryButton";
 import { Animated } from "../Animated";
 
-const iconsStyle = "text-[#3E10B4] w-18 h-18 bg-[#E4E3FB] p-2 rounded-2xl shadow-2xl";
-
 const benefits = [
   { icon: IconGraduationCap, title: "Ensino de qualidade" },
   { icon: IconHeart, title: "Reconhecido pelo MEC" },
@@ -49,7 +47,7 @@ export default function CtaComponent() {
               return (
                 <Animated key={benefit.title} as="div" preset="fadeRight" index={index} className="flex flex-col items-center gap-4">
                   <Animated as="div" whileHover="hoverScale">
-                    <Icon className={iconsStyle} />
+                    <Icon className="text-[#3E10B4] w-18 h-18 bg-[#E4E3FB] p-2 rounded-2xl shadow-2xl" />
                   </Animated>
 
                   <p className="text-sm font-semibold text-center text-black">{benefit.title}</p>
@@ -75,7 +73,7 @@ export default function CtaComponent() {
               <IconShield className="text-[#3D11B4] p-3 rounded-full bg-[#E8E1FD] w-14 lg:w-20 h-14 lg:h-20" />
             </Animated>
 
-            <Animated as="p" preset="fadeUp" delay={0.5} className="w-full lg:w-3/5 text-sm lg:text-base">
+            <Animated as="p" preset="fadeUp" delay={0.5} className="w-full lg:w-3/5 text-sm lg:text-base text-primary">
               Aqui você encontra o apoio que precisa para evoluir, aprender e conquistar seus objetivos.
             </Animated>
           </div>
