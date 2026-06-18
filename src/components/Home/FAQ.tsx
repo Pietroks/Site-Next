@@ -1,13 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import { IconArrow, IconGraduationCap, IconHeadset, IconShield, MailIcon, WhatsAppIcon } from "./IconsSvg";
-import PrimaryButton from "./PrimaryButton";
+import { IconArrow, IconGraduationCap, IconHeadset, IconShield, MailIcon, WhatsAppIcon } from "../IconsSvg";
+import PrimaryButton from "../PrimaryButton";
 import { normalizedFaqs } from "@/utils/normalizedFaqs";
 import FAQContactItem from "./FAQ Components/FAQContactItem";
 import FAQItem from "./FAQ Components/FAQItem";
 import PageModel from "@/components/PageModel";
-import { Animated } from "./Animated";
+import { Animated } from "../Animated";
 
 export default function FAQ() {
   const [faqAberto, setFaqAberto] = useState<number | null>(null);

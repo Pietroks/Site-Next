@@ -1,9 +1,9 @@
 "use client";
 
 import { Cursos } from "@/utils/cursos";
-import { HeroWaveBackgrounds, IconClock, IconGraduationCap, IconHeadset, IconPapper, IconPen } from "./IconsSvg";
+import { HeroWaveBackgrounds, IconClock, IconGraduationCap, IconHeadset, IconPapper, IconPen } from "../IconsSvg";
 
-import { Animated } from "./Animated";
+import { Animated } from "../Animated";
 import MauticManualForm, { INPUT_STYLE, LABEL_STYLE } from "./MauticManualForm";
 
 export function SubscriptionForm() {

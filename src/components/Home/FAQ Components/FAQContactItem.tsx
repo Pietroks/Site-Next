@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import { IconArrow } from "../IconsSvg";
-import { Animated } from "../Animated";
+import { IconArrow } from "../../IconsSvg";
+import { Animated } from "../../Animated";
 
 interface FAQContACTItemProps {
   icon: ReactNode;

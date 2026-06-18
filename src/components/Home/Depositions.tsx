@@ -5,10 +5,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import CarouselButtons from "./CarouselButtons";
 import { HeartBanner } from "./HeartBanner";
-import { IconHeart, IconStar } from "./IconsSvg";
+import { IconHeart, IconStar } from "../IconsSvg";
 import PageModel from "@/components/PageModel";
-import { Animated } from "./Animated";
-import { AnimatedGradientBar } from "./AnimatedGradientBar";
+import { Animated } from "../Animated";
+import { AnimatedGradientBar } from "../AnimatedGradientBar";
 
 export default function Depositions() {
   const depoimentos = Depoimentos;

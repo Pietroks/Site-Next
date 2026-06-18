@@ -1,6 +1,6 @@
-import PrimaryButton from "./PrimaryButton";
+import PrimaryButton from "../PrimaryButton";
 import { ReactNode } from "react";
-import { Animated } from "./Animated";
+import { Animated } from "../Animated";
 
 interface HeartBannerProps {
   icon: ReactNode;

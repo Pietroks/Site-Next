@@ -4,9 +4,9 @@ import { footerLinks, linksFinal, socials } from "@/utils/dataFooter";
 import { AnimatedGradientBar } from "./AnimatedGradientBar";
 import { IconArrow } from "./IconsSvg";
 import PrimaryButton from "./PrimaryButton";
-import MauticManualForm from "./MauticManualForm";
 import { memo } from "react";
 import { Animated } from "./Animated";
+import MauticManualForm from "./Home/MauticManualForm";
 
 const navigateToView = () => document.getElementById("header")?.scrollIntoView({ behavior: "smooth" });
 

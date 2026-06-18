@@ -1,7 +1,7 @@
 "use client";
 
-import { IconHistoryClock, IconPlaySupport, IconShieldMec } from "./IconsSvg";
-import { Animated } from "./Animated";
+import { IconHistoryClock, IconPlaySupport, IconShieldMec } from "../IconsSvg";
+import { Animated } from "../Animated";
 
 export default function Benefits() {
   const benefits = [

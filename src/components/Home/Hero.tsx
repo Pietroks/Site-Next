@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { HeroWaveBackgrounds, WhatsAppIcon } from "./IconsSvg";
-import PrimaryButton from "./PrimaryButton";
-import { Animated } from "./Animated";
+import { HeroWaveBackgrounds, WhatsAppIcon } from "../IconsSvg";
+import PrimaryButton from "../PrimaryButton";
+import { Animated } from "../Animated";
 
 export default function Hero() {
   return (

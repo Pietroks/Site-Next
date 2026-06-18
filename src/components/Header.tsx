@@ -6,6 +6,7 @@ import { headerLinks } from "@/utils/headerLinks";
 import { Animated } from "./Animated";
 import { useEffect, useState } from "react";
 import { X, Menu } from "lucide-react";
+import Link from "next/link";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -40,21 +41,21 @@ export default function Header() {
             <nav className="flex flex-col gap-4 overflow-y-auto">
               {menuItems.map((item, i) => (
                 <div key={i} className="flex flex-col gap-2">
-                  <a href={item.href} className="text-purple-800 font-semibold text-lg" onClick={() => setMobileOpen(false)}>
+                  <Link href={item.href} className="text-purple-800 font-semibold text-lg" onClick={() => setMobileOpen(false)}>
                     {item.label}
-                  </a>
+                  </Link>
 
                   {item.dropdown && (
                     <div className="flex flex-col pl-4 gap-2 border-l border-purple-200">
                       {item.dropdown.map((dropItem, dropI) => (
-                        <a
+                        <Link
                           key={dropI}
                           href={dropItem.href}
                           className="text-gray-500 text-sm hover:text-orange-600"
                           onClick={() => setMobileOpen(false)}
                         >
                           {dropItem.label}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   )}
@@ -84,13 +85,13 @@ export default function Header() {
 
                 <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500">
                   {item.dropdown.map((dropItem, dropI) => (
-                    <a
+                    <Link
                       key={dropI}
                       href={dropItem.href}
                       className="block px-4 py-2 hover:bg-gray-200 transition-colors duration-500 first:rounded-t-lg last:rounded-b-lg"
                     >
                       {dropItem.label}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </Animated>

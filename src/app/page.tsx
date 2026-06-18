@@ -1,19 +1,17 @@
-import Benefits from "@/components/Benefits";
-import BlogSection from "@/components/BlogSection";
-import Courses from "@/components/Courses";
-import CtaComponent from "@/components/CtaComponent";
-import Depositions from "@/components/Depositions";
-import FAQ from "@/components/FAQ";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
-import { SubscriptionForm } from "@/components/SubscriptionForm";
+import Benefits from "@/components/Home/Benefits";
+import BlogSection from "@/components/Home/BlogSection";
+import Courses from "@/components/Home/Courses";
+import CtaComponent from "@/components/Home/CtaComponent";
+import Depositions from "@/components/Home/Depositions";
+import FAQ from "@/components/Home/FAQ";
+import Hero from "@/components/Home/Hero";
+
+import Stats from "@/components/Home/Stats";
+import { SubscriptionForm } from "@/components/Home/SubscriptionForm";
 
 export default function Home() {
   return (
     <>
-      <Header />
       <Hero />
       <Stats />
       <Courses />
@@ -23,7 +21,6 @@ export default function Home() {
       <BlogSection />
       <FAQ />
       <CtaComponent />
-      <Footer />
     </>
   );
 }

@@ -1,9 +1,9 @@
 "use client";
 
-import { AnimatedGradientBar } from "./AnimatedGradientBar";
-import { IconArrow, IconComputer, IconGraduationCap, IconHeart, IconPerson, IconShield } from "./IconsSvg";
-import PrimaryButton from "./PrimaryButton";
-import { Animated } from "./Animated";
+import { AnimatedGradientBar } from "../AnimatedGradientBar";
+import { IconArrow, IconComputer, IconGraduationCap, IconHeart, IconPerson, IconShield } from "../IconsSvg";
+import PrimaryButton from "../PrimaryButton";
+import { Animated } from "../Animated";
 
 const iconsStyle = "text-[#3E10B4] w-18 h-18 bg-[#E4E3FB] p-2 rounded-2xl shadow-2xl";
 

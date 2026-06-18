@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { IconCarouselArrow } from "./IconsSvg";
+import { IconCarouselArrow } from "../IconsSvg";
 
 interface CarouselButtonsProps {
   onLeftClick: () => void;

@@ -4,8 +4,8 @@ import { Cursos } from "@/utils/cursos";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import CarouselButtons from "./CarouselButtons";
-import PrimaryButton from "./PrimaryButton";
-import { Animated } from "./Animated";
+import PrimaryButton from "../PrimaryButton";
+import { Animated } from "../Animated";
 
 export default function Courses() {
   const [category, setCategory] = useState("graduacao");

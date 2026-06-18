@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { memo } from "react";
-import { IconArrow } from "../IconsSvg";
-import { Animated } from "../Animated";
+import { IconArrow } from "../../IconsSvg";
+import { Animated } from "../../Animated";
 
 interface FAQItemProps {
   pergunta: string;

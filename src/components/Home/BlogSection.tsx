@@ -1,14 +1,14 @@
 "use client";
 
-import { IconArrow, IconCalendar, IconClock, IconNewspapper } from "./IconsSvg";
-import PageModel from "./PageModel";
-import PrimaryButton from "./PrimaryButton";
+import { IconArrow, IconCalendar, IconClock, IconNewspapper } from "../IconsSvg";
+import PageModel from "../PageModel";
+import PrimaryButton from "../PrimaryButton";
 import { Artigos } from "@/utils/artigo";
 import Link from "next/link";
-import { AnimatedGradientBar } from "./AnimatedGradientBar";
+import { AnimatedGradientBar } from "../AnimatedGradientBar";
 import Image from "next/image";
+import { Animated } from "../Animated";
 import { HeartBanner } from "./HeartBanner";
-import { Animated } from "./Animated";
 
 export default function BlogSection() {
   const artigoDestaque = Artigos[0];
@@ -46,6 +46,7 @@ export default function BlogSection() {
               </p>
               <p className="text-2xl text-left w-fit font-bold text-primary">{artigoDestaque.titulo}</p>
               <p className="text-sm text-left w-fit text-gray-700">{artigoDestaque.descricao}</p>
+
               <div className="flex gap-3 md:gap-6 items-center justify-between mt-3">
                 <div className="flex lg:flex-row lg:gap-6 flex-col gap-2">
                   <div className="flex gap-1 items-center">
@@ -57,6 +58,7 @@ export default function BlogSection() {
                     <p className="text-sm font-semibold text-[#3C23C9]">{artigoDestaque.tempoLeitura}</p>
                   </div>
                 </div>
+
                 <Link href={artigoDestaque.link}>
                   <PrimaryButton className="px-3 lg:px-6 py-3 flex items-center gap-3 justify-center w-fit font-semibold text-sm lg:text-base">
                     Ler artigo <IconArrow className="rotate-270" />
@@ -88,6 +90,7 @@ export default function BlogSection() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
+
               <div className="flex flex-col items-start gap-2">
                 <p className="px-3 text-left w-fit py-0.5 text-[#3C23C9] rounded-full font-semibold uppercase text-sm bg-gray-300 top-8 left-8 shadow-2xl">
                   {artigo.categoria}
@@ -95,6 +98,7 @@ export default function BlogSection() {
                 <p className="text-base md:text-lg text-left font-semibold text-primary transition-colors duration-500 hover:text-purple-600">
                   {artigo.titulo}
                 </p>
+
                 <div className="flex gap-1 items-center mt-2">
                   <IconClock className="w-6 h-6 text-gray-600 transition-colors duration-500 hover:text-purple-600" strokeWidth="2" />
                   <p className="text-sm font-semibold text-gray-600 transition-colors duration-500 hover:text-[#3C23C9]">
@@ -102,6 +106,7 @@ export default function BlogSection() {
                   </p>
                 </div>
               </div>
+
               <Link href={artigo.link}>
                 <IconArrow className="w-10 h-10 text-[#3C23C9] rotate-270 transition-colors duration-500 hover:text-purple-600" />
               </Link>

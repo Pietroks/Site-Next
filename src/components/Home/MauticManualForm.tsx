@@ -2,11 +2,9 @@
 
 import { useEffect, useState, useCallback, useRef } from "react";
 import Script from "next/script";
-
-import { motion } from "framer-motion";
-import PrimaryButton from "./PrimaryButton";
-import { IconArrow } from "./IconsSvg";
-import { Animated } from "./Animated";
+import PrimaryButton from "../PrimaryButton";
+import { IconArrow } from "../IconsSvg";
+import { Animated } from "../Animated";
 
 interface MauticManualFormProps {
   formId: string | number;

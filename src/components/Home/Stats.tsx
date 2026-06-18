@@ -1,4 +1,4 @@
-import { Animated } from "./Animated";
+import { Animated } from "../Animated";
 
 export default function Stats() {
   const stats = [
