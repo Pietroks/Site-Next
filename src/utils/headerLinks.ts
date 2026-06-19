@@ -1,5 +1,5 @@
 export const headerLinks = [
-  { label: "Graduação", href: "", delay: 0.1 },
+  { label: "Graduação", href: "/graduacao", delay: 0.1 },
   { label: "Pós-graduação", href: "", delay: 0.2 },
   {
     label: "Institucional",

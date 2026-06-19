@@ -4,11 +4,11 @@ import { Cursos } from "@/utils/cursos";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import CarouselButtons from "./CarouselButtons";
-import PrimaryButton from "../PrimaryButton";
 import { Animated } from "../Animated";
+import CourseCard from "../CourseCard";
 
 export default function Courses() {
-  const [category, setCategory] = useState("graduacao");
+  const [category, setCategory] = useState("libras/pedagogia");
   const [index, setIndex] = useState(0);
   const [itensPorPagina, setItensPorPagina] = useState(3);
 
@@ -42,7 +42,10 @@ export default function Courses() {
   };
 
   return (
-    <section id="cursos" className="py-15 px-8 bg-[#F7F7F9] dark:bg-gray-800 overflow-hidden lg:[clip-path:ellipse(90%_100%_at_50%_0%)]">
+    <section
+      id="cursos"
+      className="py-15 px-8 bg-[rgb(247,247,249)] dark:bg-gray-800 overflow-hidden lg:[clip-path:ellipse(90%_100%_at_50%_0%)]"
+    >
       <div className="max-w-7xl mx-auto">
         <Animated
           as="div"
@@ -60,7 +63,7 @@ export default function Courses() {
           <nav className="md:flex md:mb-0 lg:mb-5">
             <div className="relative flex gap-0 md:gap-3 lg:gap-6 flex-wrap justify-evenly md:min-w-max pb-2 md:pb-0">
               {[
-                { label: "Graduação", value: "graduacao" },
+                { label: "Libras e Pedagogia", value: "libras/pedagogia" },
                 { label: "Pós-Graduação", value: "pos" },
                 { label: "Cursos Livres", value: "livres" },
                 { label: "Tecnologia e Gestão", value: "tecgea" },
@@ -104,37 +107,7 @@ export default function Courses() {
                 className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-5 items-stretch cursor-grab active:cursor-grabbing"
               >
                 {cursosFiltrador.slice(index * itensPorPagina, (index + 1) * itensPorPagina).map((curso, i) => (
-                  <Animated
-                    key={i}
-                    as="div"
-                    preset="fadeUpScale"
-                    index={i}
-                    hover="lift"
-                    className="group bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col w-full overflow-hidden h-full"
-                  >
-                    <div className="h-40 bg-gray-200 dark:bg-gray-900 overflow-hidden">
-                      <img
-                        className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                        src={curso.thumb}
-                        alt={curso.alt}
-                      />
-                    </div>
-
-                    <div className="p-6 flex flex-col grow">
-                      <h3 className="font-extrabold mb-4 text-indigo-950 dark:text-gray-200 text-xl h-14 overflow-hidden">{curso.title}</h3>
-
-                      <div className="flex flex-col gap-3 text-sm mb-2">
-                        <span className="text-indigo-950 dark:text-gray-200 px-3 rounded-full text-base">
-                          . Modalidade: {curso.modalidade}
-                        </span>
-                        <span className="text-indigo-950 dark:text-gray-200 px-3 rounded-full text-base">. Duração: {curso.duracao}</span>
-                      </div>
-
-                      <PrimaryButton className="mt-4 p-3" onClick={() => console.log("abriuuuu!!!")}>
-                        Saiba mais
-                      </PrimaryButton>
-                    </div>
-                  </Animated>
+                  <CourseCard key={i} curso={curso} index={i} />
                 ))}
               </motion.div>
             </AnimatePresence>

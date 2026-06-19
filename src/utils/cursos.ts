@@ -1,7 +1,8 @@
 export const Cursos = [
   {
     title: "Licenciatura em Libras",
-    category: "graduacao",
+    category: "libras/pedagogia",
+    nivel: "graduacao",
     modalidade: "Semi-Presencial",
     duracao: "4 anos",
     thumb: "/cursos/bacharel-letras-libras.png",
@@ -9,23 +10,44 @@ export const Cursos = [
   },
   {
     title: "Bacharelado em Libras",
-    category: "graduacao",
+    category: "libras/pedagogia",
+    nivel: "graduacao",
     modalidade: "EAD",
     duracao: "4 anos",
     thumb: "/cursos/Comunicacao-assistiva.png",
     alt: "Bacharelado Letras Libras",
   },
   {
-    title: "Pedagogia",
-    category: "graduacao",
+    title: "Pedagogia Bilingue",
+    category: "libras/pedagogia",
+    nivel: "graduacao",
     modalidade: "EAD",
     duracao: "4 anos",
     thumb: "/cursos/licenciatura-letras-libras.jpg",
-    alt: "Pedagogia",
+    alt: "Pedagogia Bilingue",
+  },
+  {
+    title: "Pedagogia Infantil",
+    category: "libras/pedagogia",
+    nivel: "graduacao",
+    modalidade: "EAD",
+    duracao: "4 anos",
+    thumb: "/cursos/licenciatura-letras-libras.jpg",
+    alt: "Pedagogia Infantil",
+  },
+  {
+    title: "Pedagogia Educação Especial",
+    category: "libras/pedagogia",
+    nivel: "graduacao",
+    modalidade: "EAD",
+    duracao: "4 anos",
+    thumb: "/cursos/licenciatura-letras-libras.jpg",
+    alt: "Pedagogia Educação Especial",
   },
   {
     title: "Pós em Pedagogia",
     category: "pos",
+    nivel: "pos",
     modalidade: "EAD",
     duracao: "12 meses",
     thumb: "/cursos/Pedagogia.png",
@@ -34,6 +56,7 @@ export const Cursos = [
   {
     title: "Pós em Libras",
     category: "pos",
+    nivel: "pos",
     modalidade: "EAD",
     duracao: "12 meses",
     thumb: "/cursos/Pedagogia-bil.png",
@@ -42,6 +65,7 @@ export const Cursos = [
   {
     title: "familia-desenvolvimento-infantil",
     category: "pos",
+    nivel: "pos",
     modalidade: "EAD",
     duracao: "64 meses",
     thumb: "/cursos/familia-desenvolvimento-infantil.jpg",
@@ -50,6 +74,7 @@ export const Cursos = [
   {
     title: "AEE",
     category: "livres",
+    nivel: "livres",
     modalidade: "Online",
     duracao: "3 meses",
     thumb: "/cursos/pedagogia educação especial.png",
@@ -58,6 +83,7 @@ export const Cursos = [
   {
     title: "TEGEA",
     category: "livres",
+    nivel: "livres",
     modalidade: "Online",
     duracao: "3 meses",
     thumb: "/cursos/Pedagogia gestão escolar.png",
@@ -66,6 +92,7 @@ export const Cursos = [
   {
     title: "libras-meetings2020-02.jpg",
     category: "livres",
+    nivel: "livres",
     modalidade: "Online",
     duracao: "3 meses",
     thumb: "/cursos/libras-meetings2020-02.jpg",
@@ -74,6 +101,7 @@ export const Cursos = [
   {
     title: "libras-premium",
     category: "livres",
+    nivel: "livres",
     modalidade: "Online",
     duracao: "5 meses",
     thumb: "/cursos/libras-premium.jpg",
@@ -82,6 +110,7 @@ export const Cursos = [
   {
     title: "neurociencia-educacao-2",
     category: "livres",
+    nivel: "livres",
     modalidade: "Online",
     duracao: "3 meses",
     thumb: "/cursos/neurociencia-educacao-2.jpg",
@@ -90,6 +119,7 @@ export const Cursos = [
   {
     title: "desconto-progressivo-ensino-digital-thumb.png",
     category: "livres",
+    nivel: "livres",
     modalidade: "Online",
     duracao: "3 meses",
     thumb: "/cursos/desconto-progressivo-ensino-digital-thumb.png",
@@ -98,6 +128,7 @@ export const Cursos = [
   {
     title: "Análise e Desenvolvimento de Sistemas",
     category: "tecgea",
+    nivel: "graduacao",
     duracao: "2 anos",
     modalidade: "EAD",
     thumb: "/cursos/capacitacao@0.3x.png",
@@ -106,6 +137,7 @@ export const Cursos = [
   {
     title: "Gestão de T.I",
     category: "tecgea",
+    nivel: "graduacao",
     duracao: "2 anos",
     modalidade: "EAD",
     thumb: "/cursos/LIBRAS-FLUENCY.png",
@@ -114,6 +146,7 @@ export const Cursos = [
   {
     title: "Marketing",
     category: "tecgea",
+    nivel: "graduacao",
     duracao: "2 anos",
     modalidade: "EAD",
     thumb: "/cursos/libras@0.3x.png",
@@ -122,6 +155,7 @@ export const Cursos = [
   {
     title: "Processos Gerenciais",
     category: "tecgea",
+    nivel: "graduacao",
     duracao: "2 anos",
     modalidade: "EAD",
     thumb: "/cursos/thumb-pos-autismo.jpg",
@@ -130,6 +164,7 @@ export const Cursos = [
   {
     title: "Gestão Financeira",
     category: "tecgea",
+    nivel: "graduacao",
     duracao: "2 anos",
     modalidade: "EAD",
     thumb: "/cursos/thumb-pos-libras-expert-EDUCACIONAL.jpg",
@@ -138,6 +173,7 @@ export const Cursos = [
   {
     title: "Gestão Comercial",
     category: "tecgea",
+    nivel: "graduacao",
     duracao: "2 anos",
     modalidade: "EAD",
     thumb: "/cursos/thumb-pos-libras-expert-JURIDICO.jpg",
