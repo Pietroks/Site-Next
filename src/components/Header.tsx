@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { X, Menu } from "lucide-react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { IconMoon, IconSun } from "./IconsSvg";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -35,7 +36,11 @@ export default function Header() {
       aria-label="Alterar tema"
       className="p-2 rounded-3xl shadow-2xl bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 hover:scale-105 transition-all duration-500 font-medium cursor-pointer"
     >
-      {theme === "dark" ? "☀️" : "🌙"}
+      {theme === "dark" ? (
+        <IconSun className="transition-colors duration-300 hover:text-amber-500" />
+      ) : (
+        <IconMoon className="transition-colors duration-300 hover:text-gray-400" />
+      )}
     </button>
   );
 
