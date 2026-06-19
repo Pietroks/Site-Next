@@ -24,7 +24,7 @@ export default function FAQContactItem({ icon, title, value, href }: FAQContACTI
         </Animated>
 
         <div className="flex flex-col gap-1 items-start justify-center">
-          <Animated preset="fadeUp" delay={0.3} as="p" className="text-primary font-semibold text-sm md:text-base">
+          <Animated preset="fadeUp" delay={0.3} as="p" className="text-primary dark:text-purple-500 font-semibold text-sm md:text-base">
             {title}
           </Animated>
 
@@ -32,7 +32,7 @@ export default function FAQContactItem({ icon, title, value, href }: FAQContACTI
             preset="fadeUp"
             delay={0.3}
             as="p"
-            className="text-[#3C13D3] font-semibold text-sm md:text-base transition-all duration-500 hover:text-purple-800"
+            className="text-[#3C13D3] dark:text-[#552af0] font-semibold text-sm md:text-base transition-all duration-500 hover:text-purple-800"
           >
             {value}
           </Animated>

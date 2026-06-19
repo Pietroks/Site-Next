@@ -17,20 +17,20 @@ const blobStyle =
 
 export default function CtaComponent() {
   return (
-    <section className="py-5 lg:py-15 bg-[linear-gradient(to_bottom_left,#E4DFFB,#EEEBFC,#E1EFFD,#E9E6FD)] overflow-hidden">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-10 gap-8 w-full bg-[#F2F1FD] rounded-2xl shadow-2xl relative">
+    <section className="py-5 lg:py-15 bg-[linear-gradient(to_bottom_left,#E4DFFB,#EEEBFC,#E1EFFD,#E9E6FD)] dark:bg-[linear-gradient(to_bottom_left,#0b0a14,#121026,#0d1527,#100e24)] overflow-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-10 gap-8 w-full bg-[#F2F1FD] dark:bg-gray-800 rounded-2xl shadow-2xl relative">
         <div className="col-span-1 lg:col-span-5 p-5 lg:p-16">
           <div className="relative overflow-hidden">
-            <Animated as="h2" preset="fadeUp" delay={0.2} className="text-5xl lg:text-6xl font-bold mb-5 text-black">
+            <Animated as="h2" preset="fadeUp" delay={0.2} className="text-5xl lg:text-6xl font-bold mb-5 text-black dark:text-gray-200">
               Seu futuro começa <strong className="bg-unintese-grad bg-clip-text text-transparent">agora.</strong>
             </Animated>
 
             <AnimatedGradientBar width={"15%"} />
           </div>
 
-          <Animated as="p" preset="fadeUp" delay={0.3} className="my-5 text-gray-500 text-xl">
+          <Animated as="p" preset="fadeUp" delay={0.3} className="my-5 text-gray-500 dark:text-gray-400 text-xl">
             Mais de 120 mil alunos já transformaram suas vidas com a Uníntese.{" "}
-            <strong className="text-purple-800">O próximo sucesso</strong> pode ser seu.
+            <strong className="text-purple-800 dark:text-purple-500">O próximo sucesso</strong> pode ser seu.
           </Animated>
 
           <Animated as="div" preset="fadeUp" delay={0.4}>
@@ -50,7 +50,7 @@ export default function CtaComponent() {
                     <Icon className="text-[#3E10B4] w-18 h-18 bg-[#E4E3FB] p-2 rounded-2xl shadow-2xl" />
                   </Animated>
 
-                  <p className="text-sm font-semibold text-center text-black">{benefit.title}</p>
+                  <p className="text-sm font-semibold text-center text-black dark:text-gray-300">{benefit.title}</p>
                 </Animated>
               );
             })}

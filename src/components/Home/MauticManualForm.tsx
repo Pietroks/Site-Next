@@ -25,9 +25,9 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const PHONE_REGEX = /^[1-9]{2}[2-9][0-9]{7,8}$/;
 
 export const INPUT_STYLE =
-  "w-full border border-gray-300 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-purple-500 p-3 bg-white text-gray-800 transition-all duration-300";
+  "w-full border border-gray-300 rounded-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-purple-500 p-3 bg-white dark:placeholder:text-gray-400 text-gray-800 transition-all duration-300";
 
-export const LABEL_STYLE = "block text-medium font-bold text-primary";
+export const LABEL_STYLE = "block text-medium font-bold text-primary text-gray-800 dark:text-gray-200";
 
 const FIELD_SELECTORS = {
   nome: 'input[name="mauticform[nome]"]',

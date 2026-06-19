@@ -25,7 +25,7 @@ export default function BlogSection() {
         {artigoDestaque && (
           <Animated
             preset="fadeUp"
-            className="col-span-1 md:col-span-5 flex h-fit flex-col rounded-2xl shadow-2xl bg-white relative overflow-hidden group border border-gray-100"
+            className="col-span-1 md:col-span-5 flex h-fit flex-col rounded-2xl shadow-2xl bg-white dark:bg-gray-900 relative overflow-hidden group border border-gray-100 dark:border-gray-500"
           >
             <AnimatedGradientBar />
             <div className="relative overflow-hidden h-80 w-full">
@@ -44,18 +44,18 @@ export default function BlogSection() {
               <p className="px-3 text-left w-fit py-0.5 text-[#3C23C9] font-semibold rounded-full uppercase text-sm bg-gray-300 top-8 left-8 shadow-2xl">
                 {artigoDestaque.categoria}
               </p>
-              <p className="text-2xl text-left w-fit font-bold text-primary">{artigoDestaque.titulo}</p>
-              <p className="text-sm text-left w-fit text-gray-700">{artigoDestaque.descricao}</p>
+              <p className="text-2xl text-left w-fit font-bold text-primary dark:text-purple-500">{artigoDestaque.titulo}</p>
+              <p className="text-sm text-left w-fit text-gray-700 dark:text-gray-400">{artigoDestaque.descricao}</p>
 
               <div className="flex gap-3 md:gap-6 items-center justify-between mt-3">
                 <div className="flex lg:flex-row lg:gap-6 flex-col gap-2">
                   <div className="flex gap-1 items-center">
                     <IconCalendar className="text-purple-600" strokeWidth="2" />
-                    <p className="text-sm font-semibold text-[#3C23C9]">{artigoDestaque.data}</p>
+                    <p className="text-sm font-semibold text-[#3C23C9] dark:text-[#6246ff]">{artigoDestaque.data}</p>
                   </div>
                   <div className="flex gap-1 items-center">
                     <IconClock className="w-6 h-6 text-purple-600" strokeWidth="2" />
-                    <p className="text-sm font-semibold text-[#3C23C9]">{artigoDestaque.tempoLeitura}</p>
+                    <p className="text-sm font-semibold text-[#3C23C9] dark:text-[#6246ff]">{artigoDestaque.tempoLeitura}</p>
                   </div>
                 </div>
 
@@ -69,14 +69,14 @@ export default function BlogSection() {
           </Animated>
         )}
 
-        <div className="col-span-1 md:col-span-5 w-ful flex flex-col gap-5">
+        <div className="col-span-1 md:col-span-5 w-ful flex flex-col gap-4">
           {artigosLista.map((artigo, i) => (
             <Animated
               key={artigo.id}
               preset="fadeRight"
               index={i}
               hover="lift"
-              className="px-5 py-6 bg-white rounded-2xl shadow-xl relative overflow-hidden flex items-center gap-5 group border border-gray-100/50 cursor-pointer transition-all duration-500 hover:shadow-2xl"
+              className="px-5 py-6 bg-white dark:bg-gray-900 rounded-2xl shadow-xl relative overflow-hidden flex items-center gap-5 group border border-gray-100/50 cursor-pointer transition-all duration-500 hover:shadow-2xl"
             >
               <AnimatedGradientBar />
 
@@ -95,7 +95,7 @@ export default function BlogSection() {
                 <p className="px-3 text-left w-fit py-0.5 text-[#3C23C9] rounded-full font-semibold uppercase text-sm bg-gray-300 top-8 left-8 shadow-2xl">
                   {artigo.categoria}
                 </p>
-                <p className="text-base md:text-lg text-left font-semibold text-primary transition-colors duration-500 hover:text-purple-600">
+                <p className="text-base md:text-lg text-left font-semibold text-primary dark:text-purple-500 transition-colors duration-500 hover:text-purple-600">
                   {artigo.titulo}
                 </p>
 
@@ -108,7 +108,7 @@ export default function BlogSection() {
               </div>
 
               <Link href={artigo.link}>
-                <IconArrow className="w-10 h-10 text-[#3C23C9] rotate-270 transition-colors duration-500 hover:text-purple-600" />
+                <IconArrow className="w-10 h-10 text-[#6246ff] rotate-270 transition-colors duration-500 hover:text-purple-600" />
               </Link>
             </Animated>
           ))}

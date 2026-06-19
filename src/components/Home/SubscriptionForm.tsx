@@ -11,30 +11,29 @@ export function SubscriptionForm() {
     {
       icon: <IconGraduationCap />,
       text: "Cursos reconhecidos pelo MEC",
-      bgStyle: "bg-[#4741bf] rounded-2xl p-3 shadow-xl relative z-50 text-white",
+      bgStyle: "bg-[#4741bf] rounded-2xl p-3 shadow-xl relative z-50 text-gray-200 dark:text-gray-900",
     },
     {
       icon: <IconClock />,
       text: "Estude com flexibilidade",
-      bgStyle: "bg-[#664bd8] rounded-2xl p-3 shadow-xl relative z-50 text-white",
+      bgStyle: "bg-[#664bd8] rounded-2xl p-3 shadow-xl relative z-50 text-gray-200 dark:text-gray-900",
     },
     {
       icon: <IconHeadset />,
       text: "Suporte próximo e especializado",
-      bgStyle: "bg-[#6c60d7] rounded-2xl p-3 shadow-xl relative z-50 text-white",
+      bgStyle: "bg-[#6c60d7] rounded-2xl p-3 shadow-xl relative z-50 text-gray-200 dark:text-gray-900",
     },
   ];
 
   return (
-    <section className="bg-gray-100 py-12 relative">
-      <HeroWaveBackgrounds />
-
+    <section className="bg-gray-100 dark:bg-gray-800 py-12">
       <Animated
         as="div"
         preset="fadeUp"
         delay={0.1}
-        className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-10 p-8 rounded-2xl bg-hero-grad"
+        className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-10 p-8 rounded-2xl bg-hero-grad z-10 relative"
       >
+        <HeroWaveBackgrounds />
         <div className="col-span-1 lg:col-span-5">
           <Animated
             as="div"
@@ -46,11 +45,11 @@ export function SubscriptionForm() {
             <p className="uppercase text-gray-100">faça sua inscrição</p>
           </Animated>
 
-          <Animated as="h2" preset="fadeUp" delay={0.25} className="text-4xl lg:text-6xl font-bold text-white mb-4">
+          <Animated as="h2" preset="fadeUp" delay={0.25} className="text-4xl lg:text-6xl font-bold text-white dark:text-gray-950 mb-4">
             Dê o primeiro passo para o seu <strong className="text-orange-500 font-bold">futuro</strong>
           </Animated>
 
-          <Animated as="p" preset="fadeUp" delay={0.3} className="text-base lg:text-lg text-gray-200 my-8 font-light">
+          <Animated as="p" preset="fadeUp" delay={0.3} className="text-base lg:text-lg text-gray-200 dark:text-gray-900 my-8 font-light">
             Preencha o formulário e receba todas as informações sobre nossos cursos e condições especiais para você.
           </Animated>
 
@@ -65,20 +64,25 @@ export function SubscriptionForm() {
                 whileHover={{ y: -5 }}
               >
                 <div className={benefit.bgStyle}>{benefit.icon}</div>
-                <p className="text-sm text-white font-light">{benefit.text}</p>
+                <p className="text-sm text-white dark:text-gray-950 font-light">{benefit.text}</p>
               </Animated>
             ))}
           </div>
         </div>
 
-        <Animated as="div" preset="fadeRight" delay={0.2} className="col-span-1 lg:col-span-5 bg-gray-100 rounded-2xl shadow-lg p-6">
+        <Animated
+          as="div"
+          preset="fadeRight"
+          delay={0.2}
+          className="col-span-1 lg:col-span-5 bg-gray-100 dark:bg-gray-950 rounded-2xl shadow-lg p-6"
+        >
           <Animated as="div" preset="fadeUp" delay={0.3} className="flex items-start gap-5">
             <Animated as="div" hover="icon" className="rounded-full p-3 bg-[#753FEA] shadow-xl">
-              <IconPapper className="text-white" />
+              <IconPapper className="text-white dark:text-gray-950" />
             </Animated>
 
             <div className="flex flex-col">
-              <p className="text-xl lg:text-2xl text-primary font-bold">Inscreva-se agora</p>
+              <p className="text-xl lg:text-2xl text-primary dark:text-gray-200 font-bold">Inscreva-se agora</p>
               <p className="text-gray-500">É rápido, fácil e gratuito!</p>
             </div>
           </Animated>

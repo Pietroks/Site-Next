@@ -35,7 +35,7 @@ export default function Stats() {
   ];
 
   return (
-    <section className="bg-gray-100 py-10">
+    <section className="bg-gray-100 dark:bg-gray-700 py-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-14 md:gap-0">
         {stats.map((stat, index) => (
           <Animated
@@ -43,7 +43,7 @@ export default function Stats() {
             as="div"
             preset="fadeScale"
             delay={index * 0.15}
-            className={`text-left flex items-center gap-4 text-primary px-10 ${
+            className={`text-left flex items-center gap-4 text-primary dark:text-gray-200 px-10 ${
               index === 1 ? "border-r-gray-200 border-l-gray-200 border-2 border-t-0 border-b-0" : ""
             }`}
           >

@@ -9,7 +9,7 @@ interface IconsSvgProps {
 
 export const IconPen = ({ className = "w-6 h-6" }: IconsSvgProps) => (
   <svg
-    className={`${className} dark:text-gray-800`}
+    className={`${className}`}
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -29,7 +29,7 @@ export const IconPen = ({ className = "w-6 h-6" }: IconsSvgProps) => (
 
 export const IconCalendar = ({ className = "w-6 h-6", strokeWidth = "1" }: IconsSvgProps) => (
   <svg
-    className={`${className} dark:text-white`}
+    className={`${className}`}
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -49,7 +49,7 @@ export const IconCalendar = ({ className = "w-6 h-6", strokeWidth = "1" }: Icons
 
 export const IconGraduationCap = ({ className = "w-10 h-10" }: IconsSvgProps) => (
   <svg
-    className={`${className} dark:text-white`}
+    className={`${className}`}
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -89,7 +89,7 @@ export const IconComputer = ({ className = "w-10 h-10" }: IconsSvgProps) => (
 
 export const IconPerson = ({ className = "w-10 h-10", strokeWidth = "1" }: IconsSvgProps) => (
   <svg
-    className={`${className} dark:text-gray-800`}
+    className={`${className}`}
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -187,7 +187,7 @@ export const IconLinkedin = ({ className = "w-10 h-10", strokeWidth = "1" }: Ico
 
 export const IconClock = ({ className = "w-10 h-10", strokeWidth = "1" }: IconsSvgProps) => (
   <svg
-    className={`${className} dark:text-gray-800`}
+    className={`${className}`}
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -207,7 +207,7 @@ export const IconClock = ({ className = "w-10 h-10", strokeWidth = "1" }: IconsS
 
 export const IconHeadset = ({ className = "w-10 h-10", strokeWidth = "1" }: IconsSvgProps) => (
   <svg
-    className={`${className} dark:text-gray-800`}
+    className={`${className}`}
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -233,7 +233,7 @@ export const IconArrow = ({ className = "w-6 h-6" }: IconsSvgProps) => (
 
 export const IconHeart = ({ className = "w-25 h-25" }: IconsSvgProps) => (
   <svg
-    className={`${className} dark:text-white`}
+    className={`${className}`}
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -273,7 +273,7 @@ export const IconNewspapper = ({ className = "w-25 h-25" }: IconsSvgProps) => (
 
 export const WhatsAppIcon = ({ className = "" }: IconsSvgProps) => (
   <svg
-    className={`${className} dark:text-white`}
+    className={`${className}`}
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -296,7 +296,7 @@ export const WhatsAppIcon = ({ className = "" }: IconsSvgProps) => (
 
 export const MailIcon = ({ className = "" }: IconsSvgProps) => (
   <svg
-    className={`${className} dark:text-white`}
+    className={`${className}`}
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -315,7 +315,7 @@ export const MailIcon = ({ className = "" }: IconsSvgProps) => (
 
 export const IconPapper = ({ className = "w-10 h-10" }: IconsSvgProps) => (
   <svg
-    className={`${className} dark:text-gray-800`}
+    className={`${className}`}
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -333,7 +333,7 @@ export const IconPapper = ({ className = "w-10 h-10" }: IconsSvgProps) => (
 
 export const IconShield = ({ className = "" }: IconsSvgProps) => (
   <svg
-    className={`${className} dark:text-gray-800`}
+    className={`${className}`}
     aria-hidden="true"
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -364,19 +364,19 @@ export const IconTitleWave = ({ className = "w-full h-full stroke-[#F56F3A]" }: 
 );
 
 export const IconShieldMec = ({ className = "w-20 h-20 text-primary" }: IconsSvgProps) => (
-  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+  <svg className={`${className} dark:text-gray-200`} fill="currentColor" viewBox="0 0 24 24">
     <path d="M12.356 3.066a1 1 0 0 0-.712 0l-7 2.666A1 1 0 0 0 4 6.68a17.695 17.695 0 0 0 2.022 7.98 17.405 17.405 0 0 0 5.403 6.158 1 1 0 0 0 1.15 0 17.406 17.406 0 0 0 5.402-6.157A17.694 17.694 0 0 0 20 6.68a1 1 0 0 0-.644-.949l-7-2.666Z" />
   </svg>
 );
 
 export const IconPlaySupport = ({ className = "w-20 h-20 text-primary" }: IconsSvgProps) => (
-  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+  <svg className={`${className} dark:text-gray-200`} fill="currentColor" viewBox="0 0 24 24">
     <path fillRule="evenodd" d="M8.6 5.2A1 1 0 0 0 7 6v12a1 1 0 0 0 1.6.8l8-6a1 1 0 0 0 0-1.6l-8-6Z" clipRule="evenodd" />
   </svg>
 );
 
 export const IconHistoryClock = ({ className = "w-20 h-20 text-primary" }: IconsSvgProps) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <svg className={`${className} dark:text-gray-200`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path
       stroke="currentColor"
       strokeLinecap="round"
@@ -387,7 +387,7 @@ export const IconHistoryClock = ({ className = "w-20 h-20 text-primary" }: Icons
   </svg>
 );
 
-export const IconCarouselArrow = ({ className = "w-5 h-5 text-purple-600" }: IconsSvgProps) => (
+export const IconCarouselArrow = ({ className = "w-5 h-5" }: IconsSvgProps) => (
   <svg
     className={`${className} fill-none group-hover:fill-purple-600 transition-all duration-500`}
     aria-hidden="true"

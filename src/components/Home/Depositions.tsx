@@ -51,7 +51,7 @@ export default function Depositions() {
       subTitulo="Histórias reais de quem transformou a carreira com a Uníntese e hoje conquista caminhos."
       quebrarTitulo
     >
-      <div className="w-full relative bg-white shadow-lg rounded-xl p-10 mb-12">
+      <div className="w-full relative bg-white dark:bg-gray-800 shadow-lg rounded-xl p-10 mb-12">
         <AnimatePresence mode="wait">
           <motion.div
             key={paginaAtual}
@@ -73,7 +73,7 @@ export default function Depositions() {
                 key={`${paginaAtual}-${index}`}
                 preset="fadeUpScale"
                 index={index}
-                className="flex-1 p-8 flex gap-3 flex-col shadow-lg bg-[#F7F7FD] relative rounded-xl overflow-hidden"
+                className="flex-1 p-8 flex gap-3 flex-col shadow-lg bg-[#F7F7FD] dark:bg-gray-700 relative rounded-xl overflow-hidden"
                 whileHover={{ y: -8, scale: 1.02 }}
                 transition={{ duration: 0.6 }}
               >
@@ -113,7 +113,7 @@ export default function Depositions() {
                   />
 
                   <div className="flex flex-col items-start">
-                    <p className="font-bold text-primary">{depoimento.nome}</p>
+                    <p className="font-bold text-primary dark:text-gray-200">{depoimento.nome}</p>
                     <p className="text-sm text-gray-400 text-left">{depoimento.curso}</p>
                   </div>
                 </div>
@@ -125,7 +125,7 @@ export default function Depositions() {
         <Animated
           preset="fadeUp"
           delay={0.5}
-          className="absolute bg-white rounded-full shadow-lg flex items-center justify-center gap-3 px-5 py-3 -bottom-8 left-1/2 -translate-x-1/2"
+          className="absolute bg-white dark:bg-gray-700 rounded-full shadow-lg flex items-center justify-center gap-3 px-5 py-3 -bottom-8 left-1/2 -translate-x-1/2"
         >
           {[...Array(totalPaginas)].map((_, index) => (
             <button

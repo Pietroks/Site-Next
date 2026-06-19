@@ -23,7 +23,7 @@ export default function Benefits() {
   ];
 
   return (
-    <section className="bg-[#EDF4FB] relative -mt-16 lg:-mt-50 [clip-path:none] lg:[clip-path:url(#curvaInvertida)]">
+    <section className="bg-[#EDF4FB] dark:bg-gray-600 relative -mt-16 lg:-mt-50 [clip-path:none] lg:[clip-path:url(#curvaInvertida)]">
       <svg width="0" height="0" aria-hidden="true">
         <defs>
           <clipPath id="curvaInvertida" clipPathUnits="objectBoundingBox">
@@ -40,7 +40,7 @@ export default function Benefits() {
             preset="fadeUp"
             delay={index * 0.15}
             className={`relative flex flex-col items-center gap-3 px-10 w-full transition-all duration-500 ${
-              index < benefits.length - 1 ? "border-b-2 pb-8 md:pb-0 md:border-b-0 md:border-r-2 border-gray-200" : ""
+              index < benefits.length - 1 ? "border-b-2 pb-8 md:pb-0 md:border-b-0 md:border-r-2 border-gray-200 dark:border-gray-800" : ""
             }`}
             whileHover={{
               y: -10,
@@ -60,9 +60,9 @@ export default function Benefits() {
               {benefit.icon}
             </Animated>
 
-            <h2 className="font-bold text-center text-primary text-xl">{benefit.title}</h2>
+            <h2 className="font-bold text-center text-primary dark:text-gray-200 text-xl">{benefit.title}</h2>
 
-            <p className="text-primary-light text-center leading-relaxed">{benefit.description}</p>
+            <p className="text-primary-light dark:text-gray-300 text-center leading-relaxed">{benefit.description}</p>
           </Animated>
         ))}
       </div>

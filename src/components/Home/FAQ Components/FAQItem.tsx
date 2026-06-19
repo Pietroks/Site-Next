@@ -17,7 +17,7 @@ function FAQItemComponent({ pergunta, resposta, isOpen, onToggle }: FAQItemProps
       preset="fadeUp"
       hover="lift"
       transition={{ duration: 0.5 }}
-      className={`bg-white rounded-2xl shadow-xl p-2 md:p-4 flex flex-col gap-1 transition-all duration-500 border hover:border-gray-300 cursor-pointer ${
+      className={`bg-white dark:bg-gray-900 rounded-2xl shadow-xl p-2 md:p-4 flex flex-col gap-1 transition-all duration-500 border hover:border-gray-300 cursor-pointer ${
         isOpen ? "border-gray-300" : "border-gray-100/50"
       }`}
     >
@@ -50,7 +50,7 @@ function FAQItemComponent({ pergunta, resposta, isOpen, onToggle }: FAQItemProps
             transition={{
               duration: 0.25,
             }}
-            className="md:text-lg text-sm font-semibold text-primary transition-colors duration-500 group-hover:text-purple-800"
+            className="md:text-lg text-sm font-semibold text-primary dark:text-purple-500 transition-colors duration-500 group-hover:text-purple-800"
           >
             {pergunta}
           </motion.p>
@@ -77,7 +77,7 @@ function FAQItemComponent({ pergunta, resposta, isOpen, onToggle }: FAQItemProps
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden pl-5 md:pl-14 pr-4"
           >
-            <p className="text-gray-600 md:text-base text-sm leading-relaxed">{resposta}</p>
+            <p className="text-gray-600 dark:text-gray-400 md:text-base text-sm leading-relaxed">{resposta}</p>
           </motion.div>
         )}
       </AnimatePresence>

@@ -42,14 +42,18 @@ export default function Courses() {
   };
 
   return (
-    <section id="cursos" className="py-15 px-8 bg-[#F7F7F9] overflow-hidden lg:[clip-path:ellipse(90%_100%_at_50%_0%)]">
+    <section id="cursos" className="py-15 px-8 bg-[#F7F7F9] dark:bg-gray-800 overflow-hidden lg:[clip-path:ellipse(90%_100%_at_50%_0%)]">
       <div className="max-w-7xl mx-auto">
         <Animated
           as="div"
           preset="fadeUp"
           className="border-b-gray-200 border-b-2 border-t-0 border-x-0 border flex flex-col md:flex-row w-full md:items-center mb-6 gap-6 md:gap-8 lg:gap-24"
         >
-          <Animated as="h2" preset="fadeLeft" className="text-4xl text-indigo-950 font-bold mb-3 text-center md:text-left">
+          <Animated
+            as="h2"
+            preset="fadeLeft"
+            className="text-4xl text-indigo-950 dark:text-gray-200 font-bold mb-3 text-center md:text-left"
+          >
             Nossos Cursos
           </Animated>
 
@@ -69,7 +73,9 @@ export default function Courses() {
                   hover="lift"
                   onClick={() => mudarCategoria(item.value)}
                   className={`relative px-4 md:px-1 lg:px-4 py-2 font-semibold cursor-pointer transition-all duration-500 md:text-wrap lg:whitespace-nowrap ${
-                    category === item.value ? "text-orange-600" : "text-indigo-950 hover:text-orange-600"
+                    category === item.value
+                      ? "text-orange-600"
+                      : "text-indigo-950 dark:text-gray-200 hover:text-orange-600 dark:hover:text-orange-500"
                   }`}
                 >
                   {item.label}
@@ -104,9 +110,9 @@ export default function Courses() {
                     preset="fadeUpScale"
                     index={i}
                     hover="lift"
-                    className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col w-full overflow-hidden h-full"
+                    className="group bg-white dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col w-full overflow-hidden h-full"
                   >
-                    <div className="h-40 bg-gray-200 overflow-hidden">
+                    <div className="h-40 bg-gray-200 dark:bg-gray-900 overflow-hidden">
                       <img
                         className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                         src={curso.thumb}
@@ -115,11 +121,13 @@ export default function Courses() {
                     </div>
 
                     <div className="p-6 flex flex-col grow">
-                      <h3 className="font-extrabold mb-4 text-indigo-950 text-xl h-14 overflow-hidden">{curso.title}</h3>
+                      <h3 className="font-extrabold mb-4 text-indigo-950 dark:text-gray-200 text-xl h-14 overflow-hidden">{curso.title}</h3>
 
                       <div className="flex flex-col gap-3 text-sm mb-2">
-                        <span className="text-indigo-950 px-3 rounded-full text-base">. Modalidade: {curso.modalidade}</span>
-                        <span className="text-indigo-950 px-3 rounded-full text-base">. Duração: {curso.duracao}</span>
+                        <span className="text-indigo-950 dark:text-gray-200 px-3 rounded-full text-base">
+                          . Modalidade: {curso.modalidade}
+                        </span>
+                        <span className="text-indigo-950 dark:text-gray-200 px-3 rounded-full text-base">. Duração: {curso.duracao}</span>
                       </div>
 
                       <PrimaryButton className="mt-4 p-3" onClick={() => console.log("abriuuuu!!!")}>
@@ -134,7 +142,7 @@ export default function Courses() {
 
           <CarouselButtons onLeftClick={voltarPagina} onRightClick={avancerPagina} show={totalPaginas > 1} top="top-45" />
 
-          <Animated as="h2" preset="fadeUp" className="text-5xl mb-6 text-primary text-center mt-15">
+          <Animated as="h2" preset="fadeUp" className="text-5xl mb-6 text-primary dark:text-gray-100 text-center mt-15">
             Por que escolher a <strong>Uníntese?</strong>
           </Animated>
         </div>

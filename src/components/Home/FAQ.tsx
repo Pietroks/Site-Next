@@ -28,7 +28,7 @@ export default function FAQ() {
     >
       <div className="grid grid-cols-1 lg:grid-cols-10 gap-8 w-full">
         <Animated as="div" preset="fadeLeft" delay={0.4} className="col-span-1 lg:col-span-4 flex flex-col gap-5">
-          <div className="flex flex-col gap-5 p-8 bg-white rounded-2xl shadow-xl h-fit">
+          <div className="flex flex-col gap-5 p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-xl h-fit">
             <div className="flex flex-col-reverse lg:flex-row items-center lg:items-start gap-6">
               <Animated
                 animate={{ y: [0, -8, 0] }}
@@ -43,16 +43,21 @@ export default function FAQ() {
                 <div className="absolute bottom-1 right-1 w-0 h-0 border-l-8 border-r-8 border-t-12 border-l-transparent border-r-transparent border-t-purple-800 -rotate-42" />
               </Animated>
               <div className="flex flex-col gap-3 text-center lg:text-left">
-                <Animated as="p" preset="fadeUp" delay={0.5} className="text-3xl font-bold leading-tight text-primary text-balance">
+                <Animated
+                  as="p"
+                  preset="fadeUp"
+                  delay={0.5}
+                  className="text-3xl font-bold leading-tight text-primary dark:text-gray-200 text-balance"
+                >
                   Ainda tem alguma <strong className="text-purple-800">dúvida?</strong>
                 </Animated>
-                <Animated as="p" preset="fadeUp" delay={0.6} className="text-base text-primary">
+                <Animated as="p" preset="fadeUp" delay={0.6} className="text-base text-primary dark:text-gray-400">
                   Nossa equipe está pronta para te ajudar a escolher o melhor caminho para o seu futuro.
                 </Animated>
               </div>
             </div>
 
-            <div className="border-t-2 border-gray-200 my-6"></div>
+            <div className="border-t-2 border-gray-200 dark:border-gray-950 my-6"></div>
 
             <FAQContactItem
               href="https://wa.me/555533124003"
@@ -73,7 +78,7 @@ export default function FAQ() {
             />
           </div>
 
-          <div className="p-8 rounded-2xl gap-5 flex-col lg:flex-row shadow-2xl flex items-center bg-linear-to-tr from-[#3935C3] to-[#B37FDF] border-white border-2">
+          <div className="p-8 rounded-2xl gap-5 flex-col lg:flex-row shadow-2xl flex items-center bg-linear-to-tr from-[#3935C3] to-[#B37FDF] dark:bg-linear-to-r dark:from-[#181630] dark:to-[#141d34] border-white border-2">
             <Animated as="div" preset="fadeUp" delay={0.8} className="p-3 bg-white rounded-3xl shadow-2xl">
               <IconGraduationCap className="w-15 h-15 text-[#3C13D3] fill-[#220392]" />
             </Animated>
@@ -102,7 +107,7 @@ export default function FAQ() {
           as="div"
           preset="fadeRight"
           delay={0.4}
-          className="col-span-1 lg:col-span-6 p-6 bg-white rounded-2xl shadow-xl flex flex-col gap-4 h-fit"
+          className="col-span-1 lg:col-span-6 p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-xl flex flex-col gap-4 h-fit"
         >
           {normalizedFaqs.map((faq, i) => (
             <FAQItem
@@ -120,12 +125,14 @@ export default function FAQ() {
         as="div"
         preset="fadeUpScale"
         delay={0.5}
-        className="flex mt-10 justify-center items-center gap-4 bg-linear-to-tl from-[#E4DFFB] to-[#EEEBFC] p-4 lg:p-8 rounded-full shadow-2xl border border-[#3935c3] w-full lg:w-fit mx-auto"
+        className="flex mt-10 justify-center items-center gap-4 bg-linear-to-tl from-[#E4DFFB] to-[#EEEBFC] dark:bg-linear-to-r dark:from-[#181630] dark:to-[#141d34] dark:border dark:border-white/10 p-4 lg:p-8 rounded-full shadow-2xl border border-[#3935c3] w-full lg:w-fit mx-auto"
       >
         <IconShield className="w-20 h-20 text-[#3935C3]" />
         <div className="flex flex-col items-start">
-          <p className="text-balance text-sm lg:text-base text-gray-800">Compromisso com a qualidade e a sua jornada de sucesso.</p>
-          <p className="text-sm lg:text-lg text-purple-800 font-semibold">Uníntese: educação que transforma.</p>
+          <p className="text-balance text-sm lg:text-base text-gray-800 dark:text-gray-300">
+            Compromisso com a qualidade e a sua jornada de sucesso.
+          </p>
+          <p className="text-sm lg:text-lg text-purple-800 dark:text-purple-500 font-semibold">Uníntese: educação que transforma.</p>
         </div>
       </Animated>
     </PageModel>

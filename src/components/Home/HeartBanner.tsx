@@ -12,7 +12,7 @@ interface HeartBannerProps {
 export function HeartBanner({ icon, text, textButton, onClick }: HeartBannerProps) {
   return (
     <Animated preset="fadeUpScale" className="max-w-5xl mx-auto mt-15" whileHover={{ y: -4 }} transition={{ duration: 0.8 }}>
-      <div className="grid grid-cols-1 md:grid-cols-5 items-center rounded-4xl shadow-xl bg-linear-to-r from-[#F8F8FD] to-[#F7F7FD] gap-6 overflow-hidden relative">
+      <div className="grid grid-cols-1 md:grid-cols-5 items-center rounded-4xl shadow-xl bg-linear-to-r from-[#F8F8FD] to-[#F7F7FD] dark:bg-linear-to-r dark:from-[#181630] dark:to-[#141d34] dark:border dark:border-white/10 gap-6 overflow-hidden relative">
         <Animated
           preset="fadeLeft"
           index={0}
@@ -25,7 +25,7 @@ export function HeartBanner({ icon, text, textButton, onClick }: HeartBannerProp
         </Animated>
 
         <Animated preset="fadeUp" index={1} className="col-span-2 text-center md:text-left">
-          <div className="text-base md:text-lg text-primary-light font-base leading-relaxed">{text}</div>
+          <div className="text-base md:text-lg text-primary-light dark:text-gray-200 font-base leading-relaxed">{text}</div>
         </Animated>
 
         <Animated preset="fadeRight" index={2} className="col-span-2 flex justify-center w-full">
