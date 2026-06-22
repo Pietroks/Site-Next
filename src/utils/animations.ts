@@ -59,10 +59,10 @@ export const hovers = {
   },
 };
 
-export const transition = (delay = 0, duration = 0.7): Transition => ({
+export const transition = (delay = 0, duration = 0.5): Transition => ({
   duration,
   delay,
   ease: "easeInOut",
 });
 
-export const stagger = (index: number, step = 0.3) => index * step;
+export const stagger = (index: number, step = 0.2) => index * step;

@@ -29,7 +29,13 @@ export default function Courses() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const cursosFiltrador = Cursos.filter((curso) => curso.category === category);
+  const cursosFiltrador = Cursos.filter((curso) => {
+    if (category === "pos") {
+      return curso.nivel === "pos";
+    }
+
+    return curso.category === category;
+  });
 
   const totalPaginas = Math.ceil(cursosFiltrador.length / itensPorPagina);
 

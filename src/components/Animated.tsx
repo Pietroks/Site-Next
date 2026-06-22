@@ -30,9 +30,7 @@ export function Animated<T extends React.ElementType = "div">({
   const Component = (motion as any)[Tag] || motion.div;
 
   const animation = preset ? animations[preset] : {};
-
   const finalDelay = delay + (index !== undefined ? stagger(index) : 0);
-
   const hoverAnimation = hover ? hovers[hover] : undefined;
 
   return (
@@ -40,7 +38,7 @@ export function Animated<T extends React.ElementType = "div">({
       {...(preset && {
         initial: "hidden",
         whileInView: "show",
-        viewport: { once: true },
+        viewport: { once: true, margin: "0px 0px 200px 0px" },
         variants: animation,
       })}
       whileHover={hoverAnimation}

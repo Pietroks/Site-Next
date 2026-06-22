@@ -1,6 +1,7 @@
 "use client";
 
 import { Animated } from "./Animated";
+import { IconCalendarFill, IconCheck } from "./IconsSvg";
 import PrimaryButton from "./PrimaryButton";
 
 interface CourseCardProps {
@@ -34,11 +35,20 @@ export default function CourseCard({ curso, index }: CourseCardProps) {
 
       <div className="p-6 flex flex-col grow">
         <div>
-          <h3 className="font-extrabold mb-4 text-indigo-950 dark:text-gray-200 text-xl h-14 overflow-hidden">{curso.title}</h3>
+          <h3
+            title={curso.title}
+            className="font-extrabold mb-4 text-indigo-950 dark:text-gray-200 text-xl overflow-hidden line-clamp-2 min-h-14"
+          >
+            {curso.title}
+          </h3>
 
           <div className="flex flex-col gap-3 text-sm mb-2">
-            <span className="text-indigo-950 dark:text-gray-200 px-3 rounded-full text-base">. Modalidade: {curso.modalidade}</span>
-            <span className="text-indigo-950 dark:text-gray-200 px-3 rounded-full text-base">. Duração: {curso.duracao}</span>
+            <span className="text-indigo-950 dark:text-gray-200 px-3 rounded-full text-base flex items-center gap-3">
+              <IconCheck /> Modalidade: {curso.modalidade}
+            </span>
+            <span className="text-indigo-950 dark:text-gray-200 px-3 rounded-full text-base flex items-center gap-3">
+              <IconCalendarFill /> Duração: {curso.duracao}
+            </span>
           </div>
         </div>
 

@@ -14,7 +14,7 @@ interface PageModelProps {
 export default function PageModel({ titulo1, titulo2, subTitulo, children, quebrarTitulo = false }: PageModelProps) {
   return (
     <section className="py-15 bg-[linear-gradient(to_bottom_left,#E4DFFB,#EEEBFC,#E1EFFD,#E9E6FD)] dark:bg-[linear-gradient(to_bottom_left,#0b0a14,#121026,#0d1527,#100e24)] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 flex flex-col items-center">
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
         <Animated as="div" preset="fadeUp" delay={0.1} className="relative flex flex-col items-center text-center">
           <h2 className="text-primary dark:text-gray-200 font-bold text-4xl md:text-5xl">
             {titulo1} {quebrarTitulo ? <br /> : null} <strong className="bg-unintese-grad bg-clip-text text-transparent">{titulo2}</strong>
@@ -29,7 +29,7 @@ export default function PageModel({ titulo1, titulo2, subTitulo, children, quebr
           {subTitulo}
         </Animated>
 
-        <div>{children}</div>
+        <div className="w-full">{children}</div>
       </div>
     </section>
   );

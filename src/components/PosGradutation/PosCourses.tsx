@@ -1,31 +1,26 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
-import PageModel from "../PageModel";
 import { Cursos } from "@/utils/cursos";
-import CourseCard from "../CourseCard";
 import { useState } from "react";
+import PageModel from "../PageModel";
 import { Animated } from "../Animated";
+import CourseCard from "../CourseCard";
+import { motion } from "framer-motion";
 
-export default function GraduationCourses() {
+export default function PosCourses() {
   const [subFilter, setSubFilter] = useState("todos");
 
-  const graduacaoApenas = Cursos.filter((curso) => curso.nivel.toLowerCase() === "graduacao");
+  const posApenas = Cursos.filter((curso) => curso.nivel.toLowerCase() === "pos");
 
-  const cursosFiltrados = graduacaoApenas.filter((curso) => {
+  const cursosFiltrados = posApenas.filter((curso) => {
     const title = curso.title.toLowerCase();
+    const category = curso.category.toLowerCase();
 
     if (subFilter === "libras") {
-      return title.includes("libras") || title.includes("bilingue");
+      return title.includes("libras");
     }
-    if (subFilter === "pedagogia") {
-      return title.includes("pedagogia");
-    }
-    if (subFilter === "gestao") {
-      return title.includes("financeira") || title.includes("comercial") || title.includes("processos") || title.includes("marketing");
-    }
-    if (subFilter === "tecnologia") {
-      return title.includes("t.i") || title.includes("sistemas");
+    if (subFilter === "especializado") {
+      return title.includes("autismo") || title.includes("aee") || title.includes("bilíngue") || category.includes("especializado");
     }
 
     return true;
@@ -33,17 +28,15 @@ export default function GraduationCourses() {
 
   const filtrosMenu = [
     { label: "Todos os cursos", value: "todos" },
-    { label: "Libras", value: "libras" },
-    { label: "Pedagogia", value: "pedagogia" },
-    { label: "Gestão", value: "gestao" },
-    { label: "Tecnologia", value: "tecnologia" },
+    { label: "Libras (Tradução/Docência)", value: "libras" },
+    { label: "Especializações (AEE/TEA)", value: "especializado" },
   ];
 
   return (
     <PageModel
-      titulo1="Nossos cursos de"
-      titulo2="Graduação"
-      subTitulo="Cursos reconhecidos pelo MEC, flexíveis e projetados para o seu sucesso. Explore todas as nossas opções EAD e Semipresenciais."
+      titulo1="Especializações e"
+      titulo2="Pós-Graduação"
+      subTitulo="Acelere sua evolução profissional com certificações focadas no mercado. Explore nossas opções 100% online com suporte especializado."
     >
       <div className="relative px-2">
         <Animated
@@ -83,7 +76,7 @@ export default function GraduationCourses() {
               exit={{ opacity: 0 }}
               className="text-center py-12 text-gray-500 dark:text-gray-400"
             >
-              Nenhum curso encontrado nesta categoria.
+              Nenhum curso de pós-graduação encontrado nesta categoria.
             </motion.div>
           )}
         </div>
