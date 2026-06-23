@@ -27,9 +27,9 @@ export const footerLinks = [
   {
     title: "Cursos",
     links: [
-      { label: "Graduação", href: "#" },
-      { label: "Pós-graduação", href: "#" },
-      { label: "Cursos Tecnólogos", href: "#" },
+      { label: "Graduação", href: "/graduacao" },
+      { label: "Pós-graduação", href: "/pos-graduacao" },
+      { label: "Cursos Tecnólogos", href: "/graduacao?filtro=tecnologo" },
       { label: "Cursos Livres", href: "#" },
     ],
   },

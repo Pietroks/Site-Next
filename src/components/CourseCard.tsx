@@ -3,22 +3,33 @@
 import { Animated } from "./Animated";
 import { IconCalendarFill, IconCheck } from "./IconsSvg";
 import PrimaryButton from "./PrimaryButton";
+import { useRouter } from "next/navigation";
 
 interface CourseCardProps {
   curso: {
+    id: string;
     thumb: string;
     alt: string;
     title: string;
     modalidade: string;
     duracao: string;
+    nivel: string;
   };
   index: number;
 }
 
 export default function CourseCard({ curso, index }: CourseCardProps) {
+  const router = useRouter();
+
+  const handleNavegacao = () => {
+    const rotaBase = curso.nivel.toLowerCase() === "pos" ? "pos-graduacao" : "graduacao";
+
+    router.push(`/${rotaBase}/${curso.id}`);
+  };
+
   return (
     <Animated
-      key={index}
+      key={curso.id || index}
       as="div"
       preset="fadeUpScale"
       index={index}
@@ -33,7 +44,7 @@ export default function CourseCard({ curso, index }: CourseCardProps) {
         />
       </div>
 
-      <div className="p-6 flex flex-col grow">
+      <div className="p-6 flex flex-col grow justify-between">
         <div>
           <h3
             title={curso.title}
@@ -44,15 +55,15 @@ export default function CourseCard({ curso, index }: CourseCardProps) {
 
           <div className="flex flex-col gap-3 text-sm mb-2">
             <span className="text-indigo-950 dark:text-gray-200 px-3 rounded-full text-base flex items-center gap-3">
-              <IconCheck /> Modalidade: {curso.modalidade}
+              <IconCheck className="shrink-0" /> Modalidade: {curso.modalidade}
             </span>
             <span className="text-indigo-950 dark:text-gray-200 px-3 rounded-full text-base flex items-center gap-3">
-              <IconCalendarFill /> Duração: {curso.duracao}
+              <IconCalendarFill className="shrink-0" /> Duração: {curso.duracao}
             </span>
           </div>
         </div>
 
-        <PrimaryButton className="mt-4 p-3 w-full cursor-pointer" onClick={() => console.log(`Abriu: ${curso.title}`)}>
+        <PrimaryButton className="mt-4 p-3 w-full cursor-pointer" onClick={handleNavegacao}>
           Saiba mais
         </PrimaryButton>
       </div>

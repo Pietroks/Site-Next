@@ -1,19 +1,29 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import PageModel from "../PageModel";
 import { Cursos } from "@/utils/cursos";
 import CourseCard from "../CourseCard";
-import { useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { Animated } from "../Animated";
+import { useSearchParams } from "next/navigation";
 
-export default function GraduationCourses() {
+function GraduationCoursesContent() {
   const [subFilter, setSubFilter] = useState("todos");
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const filtroUrl = searchParams.get("filtro");
+    if (filtroUrl) {
+      setSubFilter(filtroUrl);
+    }
+  }, [searchParams]);
 
   const graduacaoApenas = Cursos.filter((curso) => curso.nivel.toLowerCase() === "graduacao");
 
   const cursosFiltrados = graduacaoApenas.filter((curso) => {
     const title = curso.title.toLowerCase();
+    const grau = curso.grau ? curso.grau.toLowerCase() : "";
 
     if (subFilter === "libras") {
       return title.includes("libras") || title.includes("bilingue");
@@ -28,11 +38,30 @@ export default function GraduationCourses() {
       return title.includes("t.i") || title.includes("sistemas");
     }
 
+    if (subFilter === "tecnologo") {
+      return (
+        grau === "tecnólogo" ||
+        grau === "tecnologo" ||
+        title.includes("gestão de t.i") ||
+        title.includes("processos") ||
+        title.includes("análise e desenvolvimento")
+      );
+    }
+    if (subFilter === "licenciatura") {
+      return grau === "licenciatura" || title.includes("licenciatura");
+    }
+    if (subFilter === "bacharelado") {
+      return grau === "bacharelado" || title.includes("bacharelado");
+    }
+
     return true;
   });
 
   const filtrosMenu = [
     { label: "Todos os cursos", value: "todos" },
+    { label: "Licenciatura", value: "licenciatura" },
+    { label: "Bacharelado", value: "bacharelado" },
+    { label: "Tecnólogo", value: "tecnologo" },
     { label: "Libras", value: "libras" },
     { label: "Pedagogia", value: "pedagogia" },
     { label: "Gestão", value: "gestao" },
@@ -89,5 +118,13 @@ export default function GraduationCourses() {
         </div>
       </div>
     </PageModel>
+  );
+}
+
+export default function GraduationCoursers() {
+  return (
+    <Suspense fallback={null}>
+      <GraduationCoursesContent />
+    </Suspense>
   );
 }

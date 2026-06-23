@@ -1,13 +1,13 @@
 "use client";
 
 import { Cursos } from "@/utils/cursos";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import PageModel from "../PageModel";
 import { Animated } from "../Animated";
 import CourseCard from "../CourseCard";
 import { motion } from "framer-motion";
 
-export default function PosCourses() {
+function PosCoursesContent() {
   const [subFilter, setSubFilter] = useState("todos");
 
   const posApenas = Cursos.filter((curso) => curso.nivel.toLowerCase() === "pos");
@@ -82,5 +82,13 @@ export default function PosCourses() {
         </div>
       </div>
     </PageModel>
+  );
+}
+
+export default function PosCourses() {
+  return (
+    <Suspense fallback={null}>
+      <PosCoursesContent />
+    </Suspense>
   );
 }
