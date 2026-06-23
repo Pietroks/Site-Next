@@ -78,7 +78,7 @@ export default function FAQ() {
             />
           </div>
 
-          <div className="p-8 rounded-2xl gap-5 flex-col lg:flex-row shadow-2xl flex items-center bg-linear-to-tr from-[#3935C3] to-[#B37FDF] dark:bg-linear-to-r dark:from-[#181630] dark:to-[#141d34] border-white border-2">
+          <div className="p-7 rounded-2xl gap-5 flex-col lg:flex-row shadow-2xl flex items-center bg-linear-to-tr from-[#3935C3] to-[#B37FDF] dark:bg-linear-to-r dark:from-[#181630] dark:to-[#141d34] border-white border-2">
             <Animated as="div" preset="fadeUp" delay={0.8} className="p-3 bg-white rounded-3xl shadow-2xl">
               <IconGraduationCap className="w-15 h-15 text-[#3C13D3] fill-[#220392]" />
             </Animated>

@@ -1,3 +1,14 @@
+// 1. Criamos as interfaces para tipar corretamente a estrutura da grade
+export interface Materia {
+  nome: string;
+  cargaHoraria: string;
+}
+
+export interface ModuloGrade {
+  modulo: string;
+  materias: Materia[];
+}
+
 export interface Curso {
   id: string;
   title: string;
@@ -8,6 +19,8 @@ export interface Curso {
   duracao: string;
   thumb: string;
   alt: string;
+  edital?: string;
+  gradeCurricular?: ModuloGrade[];
 }
 
 export const Cursos: Curso[] = [
@@ -22,6 +35,7 @@ export const Cursos: Curso[] = [
     duracao: "4 anos",
     thumb: "/cursos/bacharel-letras-libras.png",
     alt: "Licenciatura Letras Libras",
+    edital: "#",
   },
   {
     id: "bacharelado-em-libras",
@@ -33,6 +47,7 @@ export const Cursos: Curso[] = [
     duracao: "4 anos",
     thumb: "/cursos/Comunicacao-assistiva.png",
     alt: "Bacharelado Letras Libras",
+    edital: "https://unintese.com.br/editais/graduacao/bacharel-letras-libras.html",
   },
   {
     id: "pedagogia-bilingue",
@@ -44,6 +59,7 @@ export const Cursos: Curso[] = [
     duracao: "4 anos",
     thumb: "/cursos/licenciatura-letras-libras.jpg",
     alt: "Pedagogia Bilingue",
+    edital: "#",
   },
   {
     id: "pedagogia-infantil",
@@ -55,6 +71,7 @@ export const Cursos: Curso[] = [
     duracao: "4 anos",
     thumb: "/cursos/licenciatura-letras-libras.jpg",
     alt: "Pedagogia Infantil",
+    edital: "#",
   },
   {
     id: "pedagogia-educacao-especial",
@@ -66,6 +83,7 @@ export const Cursos: Curso[] = [
     duracao: "4 anos",
     thumb: "/cursos/licenciatura-letras-libras.jpg",
     alt: "Pedagogia Educação Especial",
+    edital: "#",
   },
 
   // --- PÓS-GRADUAÇÃO ---
@@ -79,6 +97,7 @@ export const Cursos: Curso[] = [
     duracao: "12 meses",
     thumb: "/cursos/Pedagogia.png",
     alt: "Pos em Pedagogia",
+    edital: "https://unintese.com.br/editais/pos-graduacao/edital-pos-libras-TIDL.html",
   },
   {
     id: "pos-em-libras",
@@ -90,6 +109,7 @@ export const Cursos: Curso[] = [
     duracao: "12 meses",
     thumb: "/cursos/Pedagogia-bil.png",
     alt: "Pos em Libras",
+    edital: "#",
   },
   {
     id: "capacitacao-em-libras",
@@ -101,6 +121,7 @@ export const Cursos: Curso[] = [
     duracao: "64 meses",
     thumb: "/cursos/familia-desenvolvimento-infantil.jpg",
     alt: "familia-desenvolvimento-infantil",
+    edital: "#",
   },
   {
     id: "pos-educacao-bilingue",
@@ -112,6 +133,7 @@ export const Cursos: Curso[] = [
     duracao: "64 meses",
     thumb: "/cursos/familia-desenvolvimento-infantil.jpg",
     alt: "familia-desenvolvimento-infantil",
+    edital: "#",
   },
   {
     id: "pos-atendimento-educacional-especializado-aee",
@@ -123,6 +145,7 @@ export const Cursos: Curso[] = [
     duracao: "3 meses",
     thumb: "/cursos/pedagogia educação especial.png",
     alt: "AEE",
+    edital: "#",
   },
 
   // --- CURSOS LIVRES ---
@@ -163,14 +186,81 @@ export const Cursos: Curso[] = [
   // --- TECNÓLOGOS ---
   {
     id: "analise-e-desenvolvimento-de-sistemas",
-    title: "Análise e Desenvolvimento de Sistemas",
-    category: "tecgea",
+    title: "Tecnologia em Análise e Desenvolvimento de Sistemas",
+    category: "tecnologia",
     nivel: "graduacao",
     grau: "Tecnólogo",
-    duracao: "2 anos",
     modalidade: "EAD",
-    thumb: "/cursos/capacitacao@0.3x.png",
-    alt: "Análise e Desenvolvimento de Sistemas",
+    duracao: "2 anos e meio",
+    thumb: "/cursos/libras-premium.jpg",
+    alt: "Curso de ADS",
+    edital: "/editais/ads-2026.pdf",
+    gradeCurricular: [
+      {
+        modulo: "Conhecimento Específico I",
+        materias: [
+          { nome: "Fundamentos de Sistemas Operacionais", cargaHoraria: "50h" },
+          { nome: "Pensamento Computacional", cargaHoraria: "50h" },
+          { nome: "Ferramentas de Desenvolvimento Web", cargaHoraria: "60h" },
+          { nome: "Arquitetura de Sistemas", cargaHoraria: "50h" },
+          { nome: "Fundamentos de Big Data e IoT", cargaHoraria: "50h" },
+          { nome: "Engenharia de Software", cargaHoraria: "50h" },
+          { nome: "Segurança em Sistemas Computacionais", cargaHoraria: "50h" },
+          { nome: "Banco de Dados Relacional", cargaHoraria: "50h" },
+          { nome: "Algoritmos e Programação com Python", cargaHoraria: "50h" },
+          { nome: "Programação Orientada a Objetos", cargaHoraria: "50h" },
+          { nome: "Integração de Aplicações", cargaHoraria: "50h" },
+        ],
+      },
+      {
+        modulo: "Conhecimento Específico II",
+        materias: [
+          { nome: "Análise de Algoritmos", cargaHoraria: "50h" },
+          { nome: "Paradigmas de Programação", cargaHoraria: "50h" },
+          { nome: "Estrutura de Dados", cargaHoraria: "60h" },
+          { nome: "Desenvolvimento de Software com Metodologias Ágeis", cargaHoraria: "50h" },
+          { nome: "Teste de Software", cargaHoraria: "50h" },
+          { nome: "Interface humano-computador", cargaHoraria: "50h" },
+          { nome: "Gerenciamento de Projeto de Softwares", cargaHoraria: "50h" },
+          { nome: "Inteligência Artificial", cargaHoraria: "50h" },
+          { nome: "Desenvolvimento para Dispositivos Móveis", cargaHoraria: "50h" },
+          { nome: "Direito e Ética na Computação", cargaHoraria: "50h" },
+        ],
+      },
+      {
+        modulo: "Criatividade & Inovação",
+        materias: [
+          { nome: "Pensamento Criativo e Inovação", cargaHoraria: "50h" },
+          { nome: "Empreendedorismo e Mentalidade Empreendedora", cargaHoraria: "50h" },
+          { nome: "Pensamento Disruptivo, Transformações Digitais e Organizações Inovadoras", cargaHoraria: "60h" },
+          { nome: "Modelagem de Negócios", cargaHoraria: "50h" },
+        ],
+      },
+      {
+        modulo: "Gestão & Liderança",
+        materias: [
+          { nome: "Planejamento e Gestão Estratégica", cargaHoraria: "50h" },
+          { nome: "Liderança e Gestão de Pessoas", cargaHoraria: "50h" },
+          { nome: "Inteligência Emocional, Gestão de Conflitos e Trabalho em Equipe", cargaHoraria: "60h" },
+          { nome: "Desenvolvimento Gerencial e de Equipes Híbridas", cargaHoraria: "50h" },
+          { nome: "Gestão de Projetos", cargaHoraria: "50h" },
+        ],
+      },
+      {
+        modulo: "Carreira & Desenvolvimento Pessoal",
+        materias: [
+          { nome: "Sociedades Inclusivas, Valores e Direitos Humanos", cargaHoraria: "50h" },
+          { nome: "Cultura e Comportamento Humano nas Organizações", cargaHoraria: "50h" },
+          { nome: "Hard, Soft e Power Skills", cargaHoraria: "60h" },
+          { nome: "Laboratório de Carreiras", cargaHoraria: "50h" },
+          { nome: "Disciplina Optativa (Conforme oferta institucional)", cargaHoraria: "50h" },
+        ],
+      },
+      {
+        modulo: "Know-How",
+        materias: [{ nome: "Práticas Transdisciplinares de Ensino, Pesquisa e Extensão", cargaHoraria: "210h" }],
+      },
+    ],
   },
   {
     id: "gestao-de-ti",
@@ -182,6 +272,7 @@ export const Cursos: Curso[] = [
     modalidade: "EAD",
     thumb: "/cursos/LIBRAS-FLUENCY.png",
     alt: "Gestão de T.I",
+    edital: "#",
   },
   {
     id: "marketing",
@@ -193,6 +284,7 @@ export const Cursos: Curso[] = [
     modalidade: "EAD",
     thumb: "/cursos/libras@0.3x.png",
     alt: "Marketing",
+    edital: "#",
   },
   {
     id: "gestao-comercial",
@@ -204,6 +296,7 @@ export const Cursos: Curso[] = [
     modalidade: "EAD",
     thumb: "/cursos/libras@0.3x.png",
     alt: "Gestão Comercial",
+    edital: "#",
   },
   {
     id: "gestao-financeira",
@@ -215,6 +308,7 @@ export const Cursos: Curso[] = [
     modalidade: "EAD",
     thumb: "/cursos/libras@0.3x.png",
     alt: "Gestão Financeira",
+    edital: "#",
   },
   {
     id: "processos-gerenciais",
@@ -226,5 +320,6 @@ export const Cursos: Curso[] = [
     modalidade: "EAD",
     thumb: "/cursos/libras@0.3x.png",
     alt: "Processos Gerenciais",
+    edital: "#",
   },
 ];
