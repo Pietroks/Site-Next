@@ -2,9 +2,9 @@
 
 import { useEffect, useState, useCallback, useRef } from "react";
 import Script from "next/script";
-import PrimaryButton from "../PrimaryButton";
-import { IconArrow } from "../IconsSvg";
-import { Animated } from "../Animated";
+import { Animated } from "./Animated";
+import PrimaryButton from "./PrimaryButton";
+import { IconArrow } from "./IconsSvg";
 
 interface MauticManualFormProps {
   formId: string | number;
@@ -16,6 +16,13 @@ interface MauticManualFormProps {
   inputRowClassname?: string;
   submitRowClassname?: string;
   buttonStyle?: string;
+  fieldsMapping?: {
+    nome?: string;
+    email?: string;
+    whatsapp?: string;
+    submit?: string;
+  };
+  showConsent?: boolean;
 }
 
 type FeedbackType = "error" | "success" | null;
@@ -45,6 +52,8 @@ export default function MauticManualForm({
   className = "",
   inputRowClassname = "",
   submitRowClassname = "",
+  fieldsMapping,
+  showConsent = true,
 }: MauticManualFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [feedback, setFeedback] = useState<{
@@ -57,8 +66,10 @@ export default function MauticManualForm({
 
   const feedbackTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const emailFieldName = isNewsletter ? "seu_email" : "email";
-  const submitFieldName = isNewsletter ? "submit" : "quero_me_inscrever";
+  const nameField = fieldsMapping?.nome || "nome";
+  const emailFieldName = fieldsMapping?.email || (isNewsletter ? "seu_email" : "email");
+  const whatsappField = fieldsMapping?.whatsapp || "whatsapp";
+  const submitFieldName = fieldsMapping?.submit || (isNewsletter ? "submit" : "quero_me_inscrever");
 
   const showFeedback = useCallback((type: FeedbackType, message: string, element?: HTMLElement | null) => {
     setFeedback({ type, message });
@@ -127,9 +138,9 @@ export default function MauticManualForm({
     const getField = <T extends HTMLElement>(selector: string) => form.querySelector(selector) as T | null;
 
     const handleNativeValidation = (e: Event) => {
-      const nomeInput = getField<HTMLInputElement>('input[name="mauticform[nome]"]');
+      const nomeInput = getField<HTMLInputElement>(`input[name="mauticform[${nameField}]"]`);
       const emailInput = getField<HTMLInputElement>(`input[name="mauticform[${emailFieldName}]"]`);
-      const whatsappInput = getField<HTMLInputElement>('input[name="mauticform[whatsapp]"]');
+      const whatsappInput = getField<HTMLInputElement>(`input[name="mauticform[${whatsappField}]"]`);
       const checkboxInput = getField<HTMLInputElement>('input[name="mauticform[autorizo_o_contato_da_uni][]"]');
       const fields = [nomeInput, emailInput, whatsappInput, checkboxInput];
 
@@ -311,7 +322,7 @@ export default function MauticManualForm({
                     <input
                       type="text"
                       id={`mauticform_input_${formName}_nome`}
-                      name="mauticform[nome]"
+                      name={`mauticform[${nameField}]`}
                       required
                       placeholder="Digite seu nome completo"
                       className={INPUT_STYLE}
@@ -350,7 +361,7 @@ export default function MauticManualForm({
                     <input
                       type="tel"
                       id={`mauticform_input_${formName}_whatsapp`}
-                      name="mauticform[whatsapp]"
+                      name={`mauticform[${whatsappField}]`}
                       required
                       onInput={handlePhoneMask}
                       placeholder="(00) 99999-0000"
@@ -363,7 +374,7 @@ export default function MauticManualForm({
               {children}
 
               <div className={submitRowClassname || "flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 mt-5 pt-4"}>
-                {!isNewsletter && (
+                {!isNewsletter && showConsent && (
                   <Animated
                     id={`mauticform_${formName}_autorizo_o_contato_da_uni`}
                     className="flex flex-col items-start gap-1 w-full md:w-3/5 mauticform-required"

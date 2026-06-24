@@ -4,7 +4,7 @@ import { Cursos } from "@/utils/cursos";
 import { HeroWaveBackgrounds, IconClock, IconGraduationCap, IconHeadset, IconPapper, IconPen } from "../IconsSvg";
 
 import { Animated } from "../Animated";
-import MauticManualForm, { INPUT_STYLE, LABEL_STYLE } from "./MauticManualForm";
+import MauticManualForm, { INPUT_STYLE, LABEL_STYLE } from "../MauticManualForm";
 
 export function SubscriptionForm() {
   const infoBenefits = [
@@ -93,7 +93,7 @@ export function SubscriptionForm() {
             <Animated as="div" preset="fadeUp" delay={0.6} className="flex flex-col lg:flex-row gap-6 lg:gap-8">
               <div className="flex flex-col items-start gap-2 w-full mauticform-required">
                 <label className={LABEL_STYLE}>Curso de interesse</label>
-                <select className={`${INPUT_STYLE} cursor-pointer`} defaultValue="">
+                <select className={`${INPUT_STYLE} cursor-pointer`} defaultValue="" name="mauticform[curso_de_interesse]">
                   <option value="" disabled hidden>
                     Selecione seu curso
                   </option>
@@ -110,7 +110,11 @@ export function SubscriptionForm() {
             <Animated as="div" preset="fadeUp" delay={0.7} className="flex flex-col lg:flex-row gap-6 lg:gap-8 my-5">
               <div className="flex flex-col items-start gap-2 w-full">
                 <label className={LABEL_STYLE}>Como podemos te ajudar?</label>
-                <textarea placeholder="Conte-nos um pouco sobre seus objetivos..." className={INPUT_STYLE} />
+                <textarea
+                  name="mauticform[como_podemos_te_ajudar]"
+                  placeholder="Conte-nos um pouco sobre seus objetivos..."
+                  className={INPUT_STYLE}
+                />
               </div>
             </Animated>
           </MauticManualForm>

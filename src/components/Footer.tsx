@@ -6,7 +6,7 @@ import { IconArrow } from "./IconsSvg";
 import PrimaryButton from "./PrimaryButton";
 import { memo } from "react";
 import { Animated } from "./Animated";
-import MauticManualForm from "./Home/MauticManualForm";
+import MauticManualForm from "./MauticManualForm";
 
 const navigateToView = () => document.getElementById("header")?.scrollIntoView({ behavior: "smooth" });
 
@@ -57,7 +57,7 @@ function Footer() {
           <div className="col-span-1 md:col-span-3 lg:col-span-6 p-4 lg:p-0 flex items-start gap-12 lg:gap-10">
             {footerLinks.map((section) => (
               <nav key={section.title} className="flex flex-col gap-6">
-                <Animated preset="fadeUp" delay={0.4} className="uppercase text-base text-nowrap lg:text-xl font-semibold text-[#7448f5]">
+                <Animated preset="fadeUp" delay={0.4} className="uppercase text-base text-nowrap lg:text-lg font-semibold text-[#7448f5]">
                   {section.title}
                 </Animated>
 
@@ -69,7 +69,7 @@ function Footer() {
                     delay={0.5}
                     key={link.label}
                     href={link.href}
-                    className="text-sm lg:text-base text-gray-300 text-balance transition-colors duration-500 hover:text-[#7448f5]"
+                    className="text-sm lg:text-base text-gray-300 transition-colors duration-500 hover:text-[#7448f5]"
                   >
                     {link.label}
                   </Animated>

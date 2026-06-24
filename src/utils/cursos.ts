@@ -1,4 +1,3 @@
-// 1. Criamos as interfaces para tipar corretamente a estrutura da grade
 export interface Materia {
   nome: string;
   cargaHoraria: string;
@@ -21,6 +20,8 @@ export interface Curso {
   alt: string;
   edital?: string;
   gradeCurricular?: ModuloGrade[];
+  mauticFormId?: number;
+  mauticFormName?: string;
 }
 
 export const Cursos: Curso[] = [
@@ -35,7 +36,8 @@ export const Cursos: Curso[] = [
     duracao: "4 anos",
     thumb: "/cursos/bacharel-letras-libras.png",
     alt: "Licenciatura Letras Libras",
-    edital: "#",
+    mauticFormId: 111,
+    mauticFormName: "interessadonoeditaldelicenciaturaletraslibras",
   },
   {
     id: "bacharelado-em-libras",

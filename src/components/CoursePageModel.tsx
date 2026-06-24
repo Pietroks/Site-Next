@@ -5,6 +5,7 @@ import { useState } from "react";
 import { IconArrow } from "./IconsSvg";
 import { Animated } from "./Animated";
 import PrimaryButton from "./PrimaryButton";
+import MauticManualForm from "./MauticManualForm";
 
 const pageConfig = {
   graduacao: {
@@ -89,13 +90,34 @@ export default function CoursePageModel({ curso, type }: CoursePageModelProps) {
               <PrimaryButton className="w-full p-2" onClick={() => console.log(`matricula: ${curso.title}`)}>
                 Fazer matrícula
               </PrimaryButton>
-              {curso.edital && (
-                <button
-                  className="w-full py-3 px-4 rounded-xl font-semibold border-2 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white transition-all duration-500 cursor-pointer text-center text-sm"
-                  onClick={() => window.open(curso.edital, "_blank", "noopener,noreferrer")}
-                >
-                  Acessar Edital do Curso
-                </button>
+
+              {curso.mauticFormId && curso.mauticFormName ? (
+                <div className="bg-gray-50/50 dark:bg-gray-800/30 rounded-2xl p-4 mt-4 border border-gray-100 dark:border-gray-800/50 transition-all duration-300 shadow-inner">
+                  <p className="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2 px-1">
+                    Preencha para liberar o arquivo
+                  </p>
+
+                  <MauticManualForm
+                    formId={curso.mauticFormId}
+                    formName={curso.mauticFormName}
+                    buttonText="Acessar o Edital"
+                    showConsent={false}
+                    className="space-y-4"
+                    inputRowClassname="flex flex-col gap-3 mt-4 w-full"
+                    submitRowClassname="flex justify-center gap-3 w-full mt-2 pt-2"
+                    fieldsMapping={{
+                      nome: "primeiro_nome",
+                      email: "email_valido",
+                      whatsapp: "whatsapp_com_ddd",
+                      submit: "submit",
+                    }}
+                  />
+                </div>
+              ) : (
+                curso.edital &&
+                curso.edital !== "#" && (
+                  <button onClick={() => window.open(curso.edital, "_blank", "noopener, noreferrer")}>Acessar Edital do Curso</button>
+                )
               )}
             </div>
           </Animated>
