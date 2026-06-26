@@ -1,30 +1,28 @@
 "use client";
 
+import { Curso } from "@/utils/cursos";
 import { Animated } from "./Animated";
 import { IconCalendarFill, IconCheck } from "./IconsSvg";
 import PrimaryButton from "./PrimaryButton";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 interface CourseCardProps {
-  curso: {
-    id: string;
-    thumb: string;
-    alt: string;
-    title: string;
-    modalidade: string;
-    duracao: string;
-    nivel: string;
-  };
+  curso: Curso;
   index: number;
 }
 
 export default function CourseCard({ curso, index }: CourseCardProps) {
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   const handleNavegacao = () => {
-    const rotaBase = curso.nivel.toLowerCase() === "pos" ? "pos-graduacao" : "graduacao";
+    const filtroAtual = searchParams.get("filtro");
 
-    router.push(`/${rotaBase}/${curso.id}`);
+    if (filtroAtual && filtroAtual !== "todos") {
+      router.push(`/cursos/${curso.id}?fromFiltro=${filtroAtual}`);
+    } else {
+      router.push(`/cursos/${curso.id}`);
+    }
   };
 
   return (

@@ -1,10 +1,9 @@
 export const headerLinks = [
-  { label: "Graduação", href: "/graduacao", delay: 0.1 },
-  { label: "Pós-graduação", href: "/pos-graduacao", delay: 0.2 },
+  { label: "Cursos", href: "/cursos", delay: 0.1 },
   {
     label: "Institucional",
     href: "#",
-    delay: 0.3,
+    delay: 0.2,
     dropdown: [
       { label: "Comissão Própria de Avaliação (CPA)", href: "" },
       { label: "Quem somos", href: "" },
@@ -16,8 +15,8 @@ export const headerLinks = [
       { label: "Política de Privacidade", href: "" },
     ],
   },
-  { label: "Vestibular", href: "", delay: 0.4 },
-  { label: "Blog", href: "", delay: 0.5 },
-  { label: "Seja um Polo", href: "", delay: 0.6 },
-  { label: "Eventos", href: "#", delay: 0.7, dropdown: [{ label: "Escola de Educação Infantil", href: "" }] },
+  { label: "Vestibular", href: "", delay: 0.3 },
+  { label: "Blog", href: "", delay: 0.4 },
+  { label: "Seja um Polo", href: "", delay: 0.5 },
+  { label: "Eventos", href: "#", delay: 0.6, dropdown: [{ label: "Escola de Educação Infantil", href: "" }] },
 ];

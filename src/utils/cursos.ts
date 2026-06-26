@@ -8,6 +8,11 @@ export interface ModuloGrade {
   materias: Materia[];
 }
 
+export interface SecaoDetalhe {
+  titulo: string;
+  conteudo: string | string[];
+}
+
 export interface Curso {
   id: string;
   title: string;
@@ -22,6 +27,8 @@ export interface Curso {
   gradeCurricular?: ModuloGrade[];
   mauticFormId?: number;
   mauticFormName?: string;
+  whatsappContact?: string;
+  detalhesExtras?: SecaoDetalhe[];
 }
 
 export const Cursos: Curso[] = [
@@ -38,6 +45,42 @@ export const Cursos: Curso[] = [
     alt: "Licenciatura Letras Libras",
     mauticFormId: 111,
     mauticFormName: "interessadonoeditaldelicenciaturaletraslibras",
+    whatsappContact: "555584029256",
+    detalhesExtras: [
+      {
+        titulo: "Habilitações e Áreas de Atuação",
+        conteudo: [
+          "O concluinte deste curso recebe o título de Licenciado em Letras com dupla habilitação: Língua Brasileira de Sinais (Libras) e Língua Portuguesa e Literatura.",
+          "Atuação como Professor: Escolas Municipais, Estaduais e Privadas no Ensino Fundamental (anos finais) e Ensino Médio, além de Ensino Superior (Graduação e Pós-Graduação).",
+          "Atuação em Espaços Não Escolares: Comunicação institucional, mercados editoriais, consultorias linguísticas, plataformas virtuais, revisão textual e produção de material didático bilingue.",
+        ],
+      },
+      {
+        titulo: "O que você vai aprender?",
+        conteudo:
+          "Além dos conhecimentos gerais, o curso desenvolve competências específicas em Língua Portuguesa e Libras. O estudante mergulhará nos dois idiomas para compreender fenômenos linguísticos, gramaticais e literários sob uma perspectiva bilíngue e inclusiva.",
+      },
+      {
+        titulo: "O curso vai ensinar Libras?",
+        conteudo:
+          "Sim! O estudante aprenderá a Língua Brasileira de Sinais para comunicação e docência. Como diferencial, terá acesso à Escola de Libras da Uníntese (eLibras), uma plataforma exclusiva com percurso formativo completo, do básico ao avançado, visando a fluência.",
+      },
+      {
+        titulo: "Metodologia de Ensino (AprendoCOM)",
+        conteudo:
+          "O ensino utiliza a metodologia inovadora AprendoCOM (Aprendizagem para a Compreensão). Baseada na Sala de Aula Invertida, ela centra o processo no estudante, incentivando a autonomia através de conceitos antecipados, vídeos, textos e investigação ativa.",
+      },
+      {
+        titulo: "Aulas e Interação ao Vivo",
+        conteudo:
+          "Os materiais ficam no AVA, mas a interação acontece em aulas ao vivo online semanais (ou quinzenais). O sistema próprio da Uníntese permite contato direto com professores e colegas para sanar dúvidas, debater e orientar trabalhos de forma colaborativa.",
+      },
+      {
+        titulo: "Suporte e Tecnologia",
+        conteudo:
+          "Para superar dificuldades, oferecemos as Trilhas de Aprendizagem personalizadas, com rotas individuais e tarefas de reforço. Todo o percurso conta com mediação tecnológica e orientação contínua de professores, tutores e suporte técnico.",
+      },
+    ],
   },
   {
     id: "bacharelado-em-libras",
