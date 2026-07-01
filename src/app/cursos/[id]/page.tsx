@@ -17,7 +17,7 @@ export default async function Page({ params, searchParams }: PageProps) {
     notFound();
   }
 
-  const tipoCurso = curso.nivel === "pos" ? "pos" : "graduacao";
+  const tipoCurso = ((curso.nivel?.toLowerCase() || "graduacao") as "graduacao") || "pos" || "livres";
 
   return <CoursePageModel curso={curso} type={tipoCurso} activeFilter={fromFiltro} />;
 }

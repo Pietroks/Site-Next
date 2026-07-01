@@ -21,7 +21,7 @@ interface PageConfig {
   diferenciais: string[];
 }
 
-const pageConfig: Record<"graduacao" | "pos", PageConfig> = {
+const pageConfig: Record<"graduacao" | "pos" | "livres", PageConfig> = {
   graduacao: {
     badge: "Curso Superior Reconhecido pelo MEC",
     badgeClass: "bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300",
@@ -52,6 +52,21 @@ const pageConfig: Record<"graduacao" | "pos", PageConfig> = {
       "Networking qualificado e suporte pedagógico contínuo.",
     ],
   },
+  livres: {
+    badge: "Curso de Capacitação e Extensão Profissional",
+    badgeClass: "bg-green-100 dark:bg-green-950 text-green-700 dark:text-green-300",
+    certification: () => "Certificado de Curso Livre / Extensão",
+    aboutTitle: "Sobre o Curso Livre",
+    aboutText: (curso) =>
+      `O curso livre de ${curso.title} da Uníntese foi desenhado para quem busca atualização rápida e conhecimentos práticos direto ao ponto, com total autonomia de estudos.`,
+    diferencialTitle: "Diferenciais dos Cursos Livres Uníntese",
+    diferenciais: [
+      "Início imediato e aprendizado no seu próprio ritmo.",
+      "Certificado válido para evolução funcional e horas complementares.",
+      "Conteúdo 100% focado em demandas atuais do mercado.",
+      "Acesso simplificado por qualquer dispositivo.",
+    ],
+  },
 };
 
 const NUMERO_GERAL = "555533124002";
@@ -60,7 +75,7 @@ const NUMERO_GERAL = "555533124002";
 
 interface CoursePageModelProps {
   curso: Curso;
-  type: "graduacao" | "pos";
+  type: "graduacao" | "pos" | "livres";
   activeFilter?: string;
 }
 

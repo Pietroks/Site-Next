@@ -27,10 +27,10 @@ export const footerLinks = [
   {
     title: "Cursos",
     links: [
-      { label: "Graduação", href: "#" },
-      { label: "Pós-graduação", href: "#" },
-      { label: "Cursos Tecnólogos", href: "#" },
-      { label: "Cursos Livres", href: "#" },
+      { label: "Graduação", href: "/cursos?nivel=graduacao" },
+      { label: "Pós-graduação", href: "/cursos?nivel=pos" },
+      { label: "Cursos Tecnólogos", href: "/cursos?nivel=graduacao&filtro=tecnologo" },
+      { label: "Cursos Livres", href: "/cursos?nivel=livres" },
     ],
   },
   {
