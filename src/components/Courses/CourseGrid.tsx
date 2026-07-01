@@ -1,6 +1,6 @@
 "use client";
 
-import React, { memo } from "react";
+import { memo } from "react";
 import { Animated } from "../Animated";
 import CourseCard from "../CourseCard";
 import { Curso } from "@/utils/cursos";

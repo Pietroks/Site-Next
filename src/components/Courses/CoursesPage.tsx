@@ -1,11 +1,10 @@
 "use client";
 
-import React, { Suspense, useCallback, useMemo, useState } from "react";
+import { Suspense, useCallback, useMemo, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { AnimatePresence } from "framer-motion";
 
 import { CURSOS_POR_NIVEL, getCursosByTag, NIVEL_LABELS, searchCursos } from "@/utils/cursos";
-import { LEVEL_CONFIGS } from "@/utils/level_config";
 
 import { Animated } from "../Animated";
 import PageModel from "../PageModel";
@@ -14,6 +13,7 @@ import { IconSearch } from "../IconsSvg";
 import { SortSelector, sortCursos, SortOption, SORT_OPTIONS } from "./SortSelector";
 import { FilterButton, LevelSelector, GridSkeleton, LEVEL_OPTIONS } from "./FilterWidgets";
 import { CourseGrid } from "./CourseGrid";
+import { LEVEL_CONFIGS } from "@/utils/cursos/level_config";
 
 function CourseContent() {
   const searchParams = useSearchParams();

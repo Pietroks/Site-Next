@@ -2,8 +2,8 @@
 
 import { memo } from "react";
 import { Animated } from "../Animated";
-import { LEVEL_CONFIGS } from "@/utils/level_config";
 import { NIVEL_LABELS } from "@/utils/cursos";
+import { LEVEL_CONFIGS } from "@/utils/cursos/level_config";
 
 export const LEVEL_OPTIONS = Object.keys(LEVEL_CONFIGS).map((key) => ({
   label: NIVEL_LABELS[key as keyof typeof NIVEL_LABELS] || key,

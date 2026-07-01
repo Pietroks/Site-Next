@@ -1,4 +1,4 @@
-import { Curso } from "./cursos";
+import { Curso } from "./types";
 
 interface LevelConfig {
   title1: string;

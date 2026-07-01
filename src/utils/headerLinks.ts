@@ -2,10 +2,9 @@ export const headerLinks = [
   { label: "Cursos", href: "/cursos", delay: 0.1 },
   {
     label: "Institucional",
-    href: "#",
     delay: 0.2,
     dropdown: [
-      { label: "Comissão Própria de Avaliação (CPA)", href: "" },
+      { label: "Comissão Própria de Avaliação (CPA)", href: "/institucional/cpa" },
       { label: "Quem somos", href: "" },
       { label: "ProUni", href: "" },
       { label: "Serviços", href: "" },
